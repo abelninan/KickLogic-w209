@@ -292,14 +292,14 @@ def main2():
         y = alt.Y('roleCluster', title='Player Roles'),
         color = alt.condition(selection, 'roleCluster:N', alt.value('lightgray')),
         tooltip = ['goalScored:Q']
-    ).transform_filter(selection).properties(width = 300)
+    ).transform_filter(selection).properties(width = 400)
 
     bar_2 = alt.Chart(playerank_grouping).mark_bar().encode(
         x = alt.X('minutesPlayed', title='Minutes Played'),
         y = alt.Y('roleCluster', title='Player Roles'),
         color = alt.condition(selection, 'roleCluster:N', alt.value('lightgray')),
         tooltip = ['minutesPlayed:Q']
-    ).transform_filter(selection).properties(width = 300)
+    ).transform_filter(selection).properties(width = 400)
 
     # ratio of minutes per goal per player role
     bar_3 = alt.Chart(playerank_grouping).mark_bar().encode(
@@ -307,7 +307,7 @@ def main2():
         y = alt.Y('roleCluster', title='Player Roles'),
         color = alt.condition(selection, 'roleCluster:N', alt.value('lightgray')),
         tooltip = ['minutes_per_goal:Q']
-    ).transform_filter(selection).properties(width = 300)
+    ).transform_filter(selection).properties(width = 400)
 
 
     # combining all 3 plots
