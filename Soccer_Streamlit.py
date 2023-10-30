@@ -17,8 +17,6 @@ def load_data(path):
 
 # Main function for Streamlit app
 def main1():
-    st.title('KickLogic - Soccer Analysis Dashboard - 209')
-
     # Load the data
     data_path = 'actions_sample.csv'  # Update path if needed
     data = load_data(data_path)
@@ -318,6 +316,7 @@ def main2():
     combined_plot_2
 
 def main():
+    st.title('KickLogic - Soccer Analysis Dashboard - 209')
     app_choice = st.selectbox('Choose your analysis type:, ['Player', 'Match ', 'Player Valuation', 'Club'])
     if app_choice == 'Player':
         main2()
