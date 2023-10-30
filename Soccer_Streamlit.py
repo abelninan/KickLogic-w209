@@ -239,7 +239,7 @@ def display_game_statistics(game_data):
     
 
 def main2():
-    #st.set_page_config(layout="wide")
+    st.set_page_config(layout="wide")
 
     st.write("# Player-Role Analysis")
 
