@@ -20,7 +20,7 @@ def main1():
     st.title('KickLogic - Soccer Analysis Dashboard - 209')
 
     # Load the data
-    data_path = 'actions.csv'  # Update path if needed
+    data_path = 'actions_sample.csv'  # Update path if needed
     data = load_data(data_path)
 
     # Sidebar - Game selection
