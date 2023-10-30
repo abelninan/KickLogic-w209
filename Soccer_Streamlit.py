@@ -311,7 +311,7 @@ def main2():
 
 
     # combining all 3 plots
-    combined_plot_2 = alt.hconcat(dot_plot, bar_2, bar_1, bar_3)
+    combined_plot_2 = alt.vconcat(dot_plot, bar_2, bar_1, bar_3)
 
     combined_plot_2
 
