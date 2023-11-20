@@ -316,7 +316,7 @@ def main2():
     combined_plot_2
 
 def main():
-    st.title('KickLogic - Soccer Analysis Dashboard - 209')
+    st.title('KickLogic - Soccer Analysis Dashboard')
     app_choice = st.selectbox('Choose your analysis type:', ['Player Role', 'Match', 'Player Valuation', 'Club'])
     if app_choice == 'Player Role':
         main2()
