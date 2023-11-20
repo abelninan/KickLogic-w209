@@ -317,8 +317,8 @@ def main2():
 
 def main():
     st.title('KickLogic - Soccer Analysis Dashboard - 209')
-    app_choice = st.selectbox('Choose your analysis type:', ['Player', 'Match', 'Player Valuation', 'Club'])
-    if app_choice == 'Player':
+    app_choice = st.selectbox('Choose your analysis type:', ['Player Role', 'Match', 'Player Valuation', 'Club'])
+    if app_choice == 'Player Role':
         main2()
     elif app_choice == 'Match':
         main1()
