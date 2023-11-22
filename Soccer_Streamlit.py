@@ -2,7 +2,7 @@
 # coding: utf-8
 
 # In[2]:
-
+pip install geopy
 
 import streamlit as st
 import pandas as pd
