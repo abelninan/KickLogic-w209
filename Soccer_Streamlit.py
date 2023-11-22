@@ -425,7 +425,7 @@ def create_momentum_chart(game_momentum_df):
         fill = alt.value("red")
     )
 
-    return posChart + negChart | posChart_w + negChart_w
+    return posChart_w + negChart_w
 
 def get_games_by_team_id(actions, teamId):
   return actions[actions['team_id'] == teamId]['game_id'].unique()
@@ -507,7 +507,7 @@ def create_team_comparison_charts(team_metrics_df, team_metrics):
     }
     geo_chart = base.properties(projection=projections['Albers'])
 
-    multi = alt.selection_multi(on='click', nearest=False, empty = 'none', bind='legend')
+    multi = alt.selection_multi(on='click', nearest=False, empty = 'none', bind='legend', toggle=True)
     geo_points = alt.Chart(team_metrics_df).mark_circle().encode(
         longitude='longitude:Q',
         latitude='latitude:Q',
@@ -539,7 +539,7 @@ def main3():
 
     # Sidebar - Team selection
     st.sidebar.header('Team Selection')
-    sorted_unique_teams = sorted(teams['team_id'].unique())
+    sorted_unique_teams = sorted(teams['wyId'].unique())
     selected_team = st.sidebar.selectbox('Choose a team', sorted_unique_teams)
 
     st.header('Team Momentum')
