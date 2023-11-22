@@ -527,7 +527,7 @@ def create_team_comparison_charts(team_metrics_df, team_metrics):
     return (geo_chart + geo_points) & (barChart1 | barChart2 | barChart3)
 
 def main3():
-    actions = load_data('actions.csv')
+    actions = load_data('actions_sample.csv')
     teams = load_data('teams.csv')
     
     pd.options.mode.chained_assignment = None
