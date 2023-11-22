@@ -526,28 +526,28 @@ def create_team_comparison_charts(team_metrics_df, team_metrics):
 
     return (geo_chart + geo_points) & (barChart1 | barChart2 | barChart3)
 
-def main3():
-    actions = load_data('actions_sample.csv')
-    teams = load_data('teams.csv')
+# def main3():
+    # actions = load_data('actions_sample.csv')
+    # teams = load_data('teams.csv')
     
-    pd.options.mode.chained_assignment = None
+    # pd.options.mode.chained_assignment = None
 
-    # Get lat/longs for each city
-    teams[['latitude', 'longitude']] = teams.apply(lambda x: get_lat_long(x.city), axis=1, result_type='expand')
+    # # Get lat/longs for each city
+    # teams[['latitude', 'longitude']] = teams.apply(lambda x: get_lat_long(x.city), axis=1, result_type='expand')
 
-    # Sidebar - Team selection
-    st.sidebar.header('Team Selection')
-    sorted_unique_teams = sorted(teams['wyId'].unique())
-    selected_team = st.sidebar.selectbox('Choose a team', sorted_unique_teams)
+    # # Sidebar - Team selection
+    # st.sidebar.header('Team Selection')
+    # sorted_unique_teams = sorted(teams['wyId'].unique())
+    # selected_team = st.sidebar.selectbox('Choose a team', sorted_unique_teams)
 
-    st.header('Team Momentum')
-    create_momentum_chart(calc_team_season_momentum(actions, selected_team))
+    # st.header('Team Momentum')
+    # create_momentum_chart(calc_team_season_momentum(actions, selected_team))
 
-    st.header('Team Comparisons')
-    team_metrics = ["Pass Success Rate", "Crosses / Shot", "Passes / Shot"]
-    team_metrics_df = set_team_metrics_df(actions, teams, team_metrics)
+    # st.header('Team Comparisons')
+    # team_metrics = ["Pass Success Rate", "Crosses / Shot", "Passes / Shot"]
+    # team_metrics_df = set_team_metrics_df(actions, teams, team_metrics)
 
-    create_team_comparison_charts(team_metrics_df, team_metrics)
+    # create_team_comparison_charts(team_metrics_df, team_metrics)
 
 def main():
     st.title('KickLogic - Soccer Analytics')
