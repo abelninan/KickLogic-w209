@@ -535,6 +535,8 @@ def main3():
     st.header('Team Comparisons')
     team_metrics = ["Pass Success Rate", "Crosses / Shot", "Passes / Shot"]
     team_metrics_df = set_team_metrics_df(actions, teams, team_metrics)
+    
+    st.altair_chart(create_team_comparison_charts(team_metrics_df, team_metrics), use_container_width=True)
 
 def main():
     st.title('KickLogic - Soccer Analytics')
