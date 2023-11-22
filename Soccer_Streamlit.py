@@ -392,12 +392,12 @@ def create_momentum_chart(game_momentum_df):
 
     posChart = alt.Chart(game_momentum_df).mark_area().encode(
         x="time_minutes",
-        y=alt.Y("pos_momentum", scale=alt.Scale(domain=[-1, 1]))
+        y=alt.Y("pos_momentum", scale=alt.Scale(domain=[-0.5, 0.5]))
     )
 
     negChart = alt.Chart(game_momentum_df).mark_area().encode(
         x="time_minutes",
-        y=alt.Y("neg_momentum", scale=alt.Scale(domain=[-1, 1])),
+        y=alt.Y("neg_momentum", scale=alt.Scale(domain=[-0.5, 0.5])),
         fill = alt.value("red")
     )
 
@@ -406,12 +406,12 @@ def create_momentum_chart(game_momentum_df):
 
     posChart_w = alt.Chart(game_momentum_df).mark_area().encode(
         x="time_minutes",
-        y=alt.Y("pos_momentum_weighted", scale=alt.Scale(domain=[-1, 1]))
+        y=alt.Y("pos_momentum_weighted", scale=alt.Scale(domain=[-0.5, 0.5]))
     )
 
     negChart_w = alt.Chart(game_momentum_df).mark_area().encode(
         x="time_minutes",
-        y=alt.Y("neg_momentum_weighted", scale=alt.Scale(domain=[-1, 1])),
+        y=alt.Y("neg_momentum_weighted", scale=alt.Scale(domain=[-0.5, 0.5])),
         fill = alt.value("red")
     )
 
@@ -526,13 +526,16 @@ def main3():
 
     # Sidebar - Team selection
     st.sidebar.header('Team Selection')
-    sorted_unique_teams = sorted(actions['team_id'].unique())
-    selected_team = st.sidebar.selectbox('Choose a team', sorted_unique_teams, format_func=lambda x: teams[teams['wyId']==x]['name'].to_string())
+    unique_teams = actions['team_id'].unique()
+    sorted_unique_teams = teams[teams['wyId'].isin(unique_teams)].sort_values(by=['name'])
+    selected_team = st.sidebar.selectbox('Choose a team', sorted_unique_teams['wyId'], format_func=lambda x: teams[teams['wyId']==x]['name'].iloc[0])
 
-    st.header('Team Momentum')
+    st.header('Club Momentum')
+    st.write('Chart of the average momentum of your selected club over the full 2018 season')
     st.altair_chart(create_momentum_chart(calc_team_season_momentum(actions, selected_team)), use_container_width=True)
 
     st.header('Team Comparisons')
+    st.write('Select multiple clubs from the map to compare various metrics')
     team_metrics = ["Pass Success Rate", "Crosses / Shot", "Passes / Shot"]
     team_metrics_df = set_team_metrics_df(actions, teams, team_metrics)
     
