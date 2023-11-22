@@ -6,9 +6,9 @@ import streamlit as st
 import pandas as pd
 import altair as alt
 import numpy as np
-from geopy.geocoders import Nominatim
-from ctypes import alignment
-from vega_datasets import data
+# from geopy.geocoders import Nominatim
+# from ctypes import alignment
+# from vega_datasets import data
 
 # Function to load data
 @st.cache_data  # This function will be cached
