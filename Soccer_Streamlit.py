@@ -556,8 +556,8 @@ def main():
         main2()
     elif app_choice == 'Match':
         main1()
-    elif app_choice == 'Club':
-        main3()
+    # elif app_choice == 'Club':
+    #     main3()
 
 if __name__ == '__main__':
     main()
