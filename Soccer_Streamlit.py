@@ -391,13 +391,13 @@ def create_momentum_chart(game_momentum_df):
     game_momentum_df['neg_momentum'] = game_momentum_df['momentum'].apply(lambda x: min(x, 0))
 
     posChart = alt.Chart(game_momentum_df).mark_area().encode(
-        x="time_minutes",
-        y=alt.Y("pos_momentum", scale=alt.Scale(domain=[-0.5, 0.5]))
+        x=alt.X("time_minutes", title="Game Time"),
+        y=alt.Y("pos_momentum", scale=alt.Scale(domain=[-0.5, 0.5]), title="Momentum")
     )
 
     negChart = alt.Chart(game_momentum_df).mark_area().encode(
-        x="time_minutes",
-        y=alt.Y("neg_momentum", scale=alt.Scale(domain=[-0.5, 0.5])),
+        x=alt.X("time_minutes", title="Game Time"),
+        y=alt.Y("neg_momentum", scale=alt.Scale(domain=[-0.5, 0.5]), title="Momentum"),
         fill = alt.value("red")
     )
 
@@ -405,13 +405,13 @@ def create_momentum_chart(game_momentum_df):
     game_momentum_df['neg_momentum_weighted'] = game_momentum_df['weighted_avg_momentum'].apply(lambda x: min(x, 0))
 
     posChart_w = alt.Chart(game_momentum_df).mark_area().encode(
-        x="time_minutes",
-        y=alt.Y("pos_momentum_weighted", scale=alt.Scale(domain=[-0.5, 0.5]))
+        x=alt.X("time_minutes", title="Game Time"),
+        y=alt.Y("pos_momentum_weighted", scale=alt.Scale(domain=[-0.5, 0.5]), title="Momentum")
     )
 
     negChart_w = alt.Chart(game_momentum_df).mark_area().encode(
-        x="time_minutes",
-        y=alt.Y("neg_momentum_weighted", scale=alt.Scale(domain=[-0.5, 0.5])),
+        x=alt.X("time_minutes", title="Game Time"),
+        y=alt.Y("neg_momentum_weighted", scale=alt.Scale(domain=[-0.5, 0.5]), title="Momentum"),
         fill = alt.value("red")
     )
 
@@ -459,7 +459,7 @@ def set_team_metrics_df(actions, teams, team_metrics):
 
 def make_team_comparison_bar_chart(team_metrics_df, metric, multi, height=200):
     base_bar = alt.Chart(team_metrics_df, title=metric).mark_bar().encode(
-      x="name:N",
+      x=alt.X("name:N", title = "Club"),
       color= "name:N",
       y= alt.Y(metric, axis=alt.Axis(title=None)),
     ).transform_filter(multi).properties(height=height)
@@ -472,8 +472,8 @@ def create_team_comparison_charts(team_metrics_df, team_metrics):
     # lats = alt.sequence(start=-30, stop=71, step=10, as_='lats')
     # lons = alt.sequence(start=-90, stop=91, step=10, as_='lons')
 
-    width = 800
-    height = 600
+    width = 600
+    height = 450
 
     # Source of land data
     source = alt.topo_feature('https://cdn.jsdelivr.net/npm/vega-datasets@v1.29.0/data/world-110m.json', 'countries')
@@ -489,9 +489,9 @@ def create_team_comparison_charts(team_metrics_df, team_metrics):
         "Albers": {
             "type": "albers",
             "center": [-10, 50],
-            "rotate": [-20, 0],
+            "rotate": [-10, 5],
             "translate": [width/2, height/2],
-            "scale": 1100,
+            "scale": 1000,
             "precision": 0.1
         },
     }
