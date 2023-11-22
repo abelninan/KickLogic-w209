@@ -1,0 +1,143 @@
+,city,name,wyId,officialName,area,type,latitude,longitude
+0,Newcastle upon Tyne,Newcastle United,1613,Newcastle United FC,"{'name': 'England', 'id': '0', 'alpha3code': 'XEN', 'alpha2code': ''}",club,54.9738474,-1.6131572
+1,Vigo,Celta de Vigo,692,Real Club Celta de Vigo,"{'name': 'Spain', 'id': '724', 'alpha3code': 'ESP', 'alpha2code': 'ES'}",club,42.1964491,-8.7117809
+2,Barcelona,Espanyol,691,Reial Club Deportiu Espanyol,"{'name': 'Spain', 'id': '724', 'alpha3code': 'ESP', 'alpha2code': 'ES'}",club,41.3828939,2.1774322
+3,Vitoria-Gasteiz,Deportivo Alav\u00e9s,696,Deportivo Alav\u00e9s,"{'name': 'Spain', 'id': '724', 'alpha3code': 'ESP', 'alpha2code': 'ES'}",club,42.8465088,-2.6724025
+4,Valencia,Levante,695,Levante UD,"{'name': 'Spain', 'id': '724', 'alpha3code': 'ESP', 'alpha2code': 'ES'}",club,39.4697065,-0.3763353
+5,Troyes,Troyes,3795,Esp\u00e9rance Sportive Troyes Aube Champagne,"{'name': 'France', 'id': '250', 'alpha3code': 'FRA', 'alpha2code': 'FR'}",club,48.2971626,4.0746257
+6,Getafe (Madrid),Getafe,698,Getafe Club de F\u00fatbol,"{'name': 'Spain', 'id': '724', 'alpha3code': 'ESP', 'alpha2code': 'ES'}",club,40.44443575,-3.6721261884413434
+7,M\u00f6nchengladbach,Borussia M'gladbach,2454,Borussia VfL M\u00f6nchengladbach,"{'name': 'Germany', 'id': '276', 'alpha3code': 'DEU', 'alpha2code': 'DE'}",club,,
+8,"Huddersfield, West Yorkshire",Huddersfield Town,1673,Huddersfield Town FC,"{'name': 'England', 'id': '0', 'alpha3code': 'XEN', 'alpha2code': ''}",club,53.6466645,-1.7822482
+9,Bilbao,Athletic Club,678,Athletic Club Bilbao,"{'name': 'Spain', 'id': '724', 'alpha3code': 'ESP', 'alpha2code': 'ES'}",club,43.2630018,-2.9350039
+10,Madrid,Atl\u00e9tico Madrid,679,Club Atl\u00e9tico de Madrid,"{'name': 'Spain', 'id': '724', 'alpha3code': 'ESP', 'alpha2code': 'ES'}",club,40.4167047,-3.7035825
+11,Lyon,Olympique Lyonnais,3766,Olympique Lyonnais,"{'name': 'France', 'id': '250', 'alpha3code': 'FRA', 'alpha2code': 'FR'}",club,45.7578137,4.8320114
+12,Paris,PSG,3767,Paris Saint-Germain FC,"{'name': 'France', 'id': '250', 'alpha3code': 'FRA', 'alpha2code': 'FR'}",club,48.8534951,2.3483915
+13,Valencia,Valencia,674,Valencia Club de F\u00fatbol,"{'name': 'Spain', 'id': '724', 'alpha3code': 'ESP', 'alpha2code': 'ES'}",club,39.4697065,-0.3763353
+14,Madrid,Real Madrid,675,Real Madrid Club de F\u00fatbol,"{'name': 'Spain', 'id': '724', 'alpha3code': 'ESP', 'alpha2code': 'ES'}",club,40.4167047,-3.7035825
+15,Barcelona,Barcelona,676,FC Barcelona,"{'name': 'Spain', 'id': '724', 'alpha3code': 'ESP', 'alpha2code': 'ES'}",club,41.3828939,2.1774322
+16,Las Palmas de Gran Canaria,Las Palmas,714,UD Las Palmas,"{'name': 'Spain', 'id': '724', 'alpha3code': 'ESP', 'alpha2code': 'ES'}",club,28.1288694,-15.4349015
+17,Legan\u00e9s,Legan\u00e9s,712,CD Legan\u00e9s,"{'name': 'Spain', 'id': '724', 'alpha3code': 'ESP', 'alpha2code': 'ES'}",club,,
+18,Ferrara,SPAL,3204,Societ\u00e0 Polisportiva Ars et Labor 2013,"{'name': 'Italy', 'id': '380', 'alpha3code': 'ITA', 'alpha2code': 'IT'}",club,44.766764249999994,11.827938995640167
+19,Swansea,Swansea City,10531,Swansea City AFC,"{'name': 'Wales', 'id': '0', 'alpha3code': 'XWA', 'alpha2code': ''}",club,51.6195955,-3.9459248
+20,Marseille,Olympique Marseille,3771,Olympique de Marseille,"{'name': 'France', 'id': '250', 'alpha3code': 'FRA', 'alpha2code': 'FR'}",club,43.2961743,5.3699525
+21,La Chapelle-sur-Erdre,Nantes,3770,FC Nantes,"{'name': 'France', 'id': '250', 'alpha3code': 'FRA', 'alpha2code': 'FR'}",club,47.2996846,-1.5518632
+22,Nice,Nice,3775,O.G.C. Nice C\u00f4te d'Azur,"{'name': 'France', 'id': '250', 'alpha3code': 'FRA', 'alpha2code': 'FR'}",club,43.7009358,7.2683912
+23,Rennes,Rennes,3774,Stade Rennais FC,"{'name': 'France', 'id': '250', 'alpha3code': 'FRA', 'alpha2code': 'FR'}",club,48.1113387,-1.6800198
+24,Strasbourg,Strasbourg,3779,RC Strasbourg Alsace,"{'name': 'France', 'id': '250', 'alpha3code': 'FRA', 'alpha2code': 'FR'}",club,48.584614,7.7507127
+25,Eibar,Eibar,701,SD Eibar,"{'name': 'Spain', 'id': '724', 'alpha3code': 'ESP', 'alpha2code': 'ES'}",club,43.1842839,-2.4732748
+26,"Bournemouth, Dorset",AFC Bournemouth,1659,AFC Bournemouth,"{'name': 'England', 'id': '0', 'alpha3code': 'XEN', 'alpha2code': ''}",club,50.720747450000005,-1.9516366077808365
+27,"Brighton, East Sussex",Brighton & Hove Albion,1651,Brighton & Hove Albion FC,"{'name': 'England', 'id': '0', 'alpha3code': 'XEN', 'alpha2code': ''}",club,50.8214626,-0.1400561
+28,Bremen,Werder Bremen,2443,SV Werder Bremen,"{'name': 'Germany', 'id': '276', 'alpha3code': 'DEU', 'alpha2code': 'DE'}",club,53.0758196,8.8071646
+29,Leverkusen,Bayer Leverkusen,2446,TSV Bayer 04 Leverkusen,"{'name': 'Germany', 'id': '276', 'alpha3code': 'DEU', 'alpha2code': 'DE'}",club,51.0324743,6.9881194
+30,Dortmund,Borussia Dortmund,2447,BV Borussia 09 Dortmund,"{'name': 'Germany', 'id': '276', 'alpha3code': 'DEU', 'alpha2code': 'DE'}",club,51.5142273,7.4652789
+31,M\u00fcnchen,Bayern M\u00fcnchen,2444,FC Bayern M\u00fcnchen,"{'name': 'Germany', 'id': '276', 'alpha3code': 'DEU', 'alpha2code': 'DE'}",club,,
+32,Stuttgart,Stuttgart,2445,VfB Stuttgart 1893,"{'name': 'Germany', 'id': '276', 'alpha3code': 'DEU', 'alpha2code': 'DE'}",club,48.7784485,9.1800132
+33,Gelsenkirchen,Schalke 04,2449,FC Schalke 04,"{'name': 'Germany', 'id': '276', 'alpha3code': 'DEU', 'alpha2code': 'DE'}",club,51.5110321,7.0960124
+34,Milano,Milan,3157,AC Milan,"{'name': 'Italy', 'id': '380', 'alpha3code': 'ITA', 'alpha2code': 'IT'}",club,45.4641943,9.1896346
+35,Angers,Angers,3799,Angers SCO,"{'name': 'France', 'id': '250', 'alpha3code': 'FRA', 'alpha2code': 'FR'}",club,47.4739884,-0.5515588
+36,Torino,Juventus,3159,Juventus FC,"{'name': 'Italy', 'id': '380', 'alpha3code': 'ITA', 'alpha2code': 'IT'}",club,45.0677551,7.6824892
+37,Roma,Roma,3158,AS Roma,"{'name': 'Italy', 'id': '380', 'alpha3code': 'ITA', 'alpha2code': 'IT'}",club,41.8933203,12.4829321
+38,Sassuolo,Sassuolo,3315,US Sassuolo Calcio,"{'name': 'Italy', 'id': '380', 'alpha3code': 'ITA', 'alpha2code': 'IT'}",club,44.5409769,10.7829023
+39,"Burnley, Lancashire",Burnley,1646,Burnley FC,"{'name': 'England', 'id': '0', 'alpha3code': 'XEN', 'alpha2code': ''}",club,53.7907262,-2.2439196
+40,Le Haillan,Bordeaux,3772,FC Girondins de Bordeaux,"{'name': 'France', 'id': '250', 'alpha3code': 'FRA', 'alpha2code': 'FR'}",club,44.872105,-0.6761661
+41,Hannover,Hannover 96,2455,Hannover 96,"{'name': 'Germany', 'id': '276', 'alpha3code': 'DEU', 'alpha2code': 'DE'}",club,52.3744779,9.7385532
+42,Dijon,Dijon,3804,Dijon FCO,"{'name': 'France', 'id': '250', 'alpha3code': 'FRA', 'alpha2code': 'FR'}",club,47.3215806,5.0414701
+43,Berlin,Hertha BSC,2457,Hertha BSC,"{'name': 'Germany', 'id': '276', 'alpha3code': 'DEU', 'alpha2code': 'DE'}",club,52.5170365,13.3888599
+44,Wolfsburg,Wolfsburg,2451,VfL Wolfsburg,"{'name': 'Germany', 'id': '276', 'alpha3code': 'DEU', 'alpha2code': 'DE'}",club,52.4205588,10.7861682
+45,Hamburg,Hamburger SV,2450,Hamburger SV,"{'name': 'Germany', 'id': '276', 'alpha3code': 'DEU', 'alpha2code': 'DE'}",club,53.550341,10.000654
+46,Freiburg im Breisgau,Freiburg,2453,SC Freiburg,"{'name': 'Germany', 'id': '276', 'alpha3code': 'DEU', 'alpha2code': 'DE'}",club,47.9960901,7.8494005
+47,Bologna,Bologna,3166,Bologna FC 1909,"{'name': 'Italy', 'id': '380', 'alpha3code': 'ITA', 'alpha2code': 'IT'}",club,44.4938203,11.3426327
+48,Metz,Metz,3777,FC Metz,"{'name': 'France', 'id': '250', 'alpha3code': 'FRA', 'alpha2code': 'FR'}",club,49.1196964,6.1763552
+49,Genova,Sampdoria,3164,UC Sampdoria,"{'name': 'Italy', 'id': '380', 'alpha3code': 'ITA', 'alpha2code': 'IT'}",club,44.40726,8.9338624
+50,Verona,Chievo,3165,AC Chievo Verona,"{'name': 'Italy', 'id': '380', 'alpha3code': 'ITA', 'alpha2code': 'IT'}",club,45.4384958,10.9924122
+51,Formello,Lazio,3162,SS Lazio,"{'name': 'Italy', 'id': '380', 'alpha3code': 'ITA', 'alpha2code': 'IT'}",club,42.082521,12.400273
+52,Udine,Udinese,3163,Udinese Calcio,"{'name': 'Italy', 'id': '380', 'alpha3code': 'ITA', 'alpha2code': 'IT'}",club,46.0634632,13.2358377
+53,Milano,Internazionale,3161,FC Internazionale Milano,"{'name': 'Italy', 'id': '380', 'alpha3code': 'ITA', 'alpha2code': 'IT'}",club,45.4641943,9.1896346
+54,Leicester,Leicester City,1631,Leicester City FC,"{'name': 'England', 'id': '0', 'alpha3code': 'XEN', 'alpha2code': ''}",club,52.6362,-1.1331969
+55,London,West Ham United,1633,West Ham United FC,"{'name': 'England', 'id': '0', 'alpha3code': 'XEN', 'alpha2code': ''}",club,51.4893335,-0.14405508452768728
+56,Stoke-on-Trent,Stoke City,1639,Stoke City FC,"{'name': 'England', 'id': '0', 'alpha3code': 'XEN', 'alpha2code': ''}",club,53.0162014,-2.1812607
+57,Benevento,Benevento,3219,Benevento Calcio,"{'name': 'Italy', 'id': '380', 'alpha3code': 'ITA', 'alpha2code': 'IT'}",club,41.2476307,14.705705363146528
+58,Saint-\u00c9tienne,Saint-\u00c9tienne,3782,AS Saint-\u00c9tienne,"{'name': 'France', 'id': '250', 'alpha3code': 'FRA', 'alpha2code': 'FR'}",club,,
+59,Girona,Girona,756,Girona FC,"{'name': 'Spain', 'id': '724', 'alpha3code': 'ESP', 'alpha2code': 'ES'}",club,41.9793006,2.8199439
+60,Watford,Watford,1644,Watford FC,"{'name': 'England', 'id': '0', 'alpha3code': 'XEN', 'alpha2code': ''}",club,51.6553875,-0.3957425
+61,Sinsheim,Hoffenheim,2482,TSG 1899 Hoffenheim,"{'name': 'Germany', 'id': '276', 'alpha3code': 'DEU', 'alpha2code': 'DE'}",club,49.2553,8.87722
+62,Cagliari,Cagliari,3173,Cagliari Calcio,"{'name': 'Italy', 'id': '380', 'alpha3code': 'ITA', 'alpha2code': 'IT'}",club,39.2171994,9.113311
+63,Ciserano,Atalanta,3172,Atalanta Bergamasca Calcio,"{'name': 'Italy', 'id': '380', 'alpha3code': 'ITA', 'alpha2code': 'IT'}",club,45.5852806,9.6008503
+64,Firenze,Fiorentina,3176,ACF Fiorentina,"{'name': 'Italy', 'id': '380', 'alpha3code': 'ITA', 'alpha2code': 'IT'}",club,43.7698712,11.2555757
+65,Liverpool,Everton,1623,Everton FC,"{'name': 'England', 'id': '0', 'alpha3code': 'XEN', 'alpha2code': ''}",club,53.4071991,-2.99168
+66,West Bromwich,West Bromwich Albion,1627,West Bromwich Albion FC,"{'name': 'England', 'id': '0', 'alpha3code': 'XEN', 'alpha2code': ''}",club,52.5186579,-1.9923114
+67,Manchester,Manchester City,1625,Manchester City FC,"{'name': 'England', 'id': '0', 'alpha3code': 'XEN', 'alpha2code': ''}",club,53.4794892,-2.2451148
+68,London,Tottenham Hotspur,1624,Tottenham Hotspur FC,"{'name': 'England', 'id': '0', 'alpha3code': 'XEN', 'alpha2code': ''}",club,51.4893335,-0.14405508452768728
+69,Augsburg,Augsburg,2481,FC Augsburg,"{'name': 'Germany', 'id': '276', 'alpha3code': 'DEU', 'alpha2code': 'DE'}",club,48.3668041,10.8986971
+70,London,Crystal Palace,1628,Crystal Palace FC,"{'name': 'England', 'id': '0', 'alpha3code': 'XEN', 'alpha2code': ''}",club,51.4893335,-0.14405508452768728
+71,Monaco,Monaco,19830,AS Monaco FC,"{'name': 'Monaco', 'id': '492', 'alpha3code': 'MCO', 'alpha2code': 'MC'}",club,43.7323492,7.4276832
+72,Mainz,Mainz 05,2460,1. FSV Mainz 05,"{'name': 'Germany', 'id': '276', 'alpha3code': 'DEU', 'alpha2code': 'DE'}",club,50.0012314,8.2762513
+73,Villeneuve-d'Ascq,Lille,3776,Lille OSC M\u00e9tropole,"{'name': 'France', 'id': '250', 'alpha3code': 'FRA', 'alpha2code': 'FR'}",club,50.6193174,3.1314002
+74,Frankfurt am Main,Eintracht Frankfurt,2462,Eintracht Frankfurt,"{'name': 'Germany', 'id': '276', 'alpha3code': 'DEU', 'alpha2code': 'DE'}",club,50.1106444,8.6820917
+75,"Southampton, Hampshire",Southampton,1619,Southampton FC,"{'name': 'England', 'id': '0', 'alpha3code': 'XEN', 'alpha2code': ''}",club,42.2294201,-72.7296262
+76,K\u00f6ln,K\u00f6ln,2463,1. FC K\u00f6ln,"{'name': 'Germany', 'id': '276', 'alpha3code': 'DEU', 'alpha2code': 'DE'}",club,,
+77,Liverpool,Liverpool,1612,Liverpool FC,"{'name': 'England', 'id': '0', 'alpha3code': 'XEN', 'alpha2code': ''}",club,53.4071991,-2.99168
+78,London,Chelsea,1610,Chelsea FC,"{'name': 'England', 'id': '0', 'alpha3code': 'XEN', 'alpha2code': ''}",club,51.4893335,-0.14405508452768728
+79,Manchester,Manchester United,1611,Manchester United FC,"{'name': 'England', 'id': '0', 'alpha3code': 'XEN', 'alpha2code': ''}",club,53.4794892,-2.2451148
+80,Torino,Torino,3185,Torino FC,"{'name': 'Italy', 'id': '380', 'alpha3code': 'ITA', 'alpha2code': 'IT'}",club,45.0677551,7.6824892
+81,Castel Volturno,Napoli,3187,SSC Napoli,"{'name': 'Italy', 'id': '380', 'alpha3code': 'ITA', 'alpha2code': 'IT'}",club,41.034313,13.9408351
+82,A Coru\u00f1a,Deportivo La Coru\u00f1a,677,Real Club Deportivo de La Coru\u00f1a,"{'name': 'Spain', 'id': '724', 'alpha3code': 'ESP', 'alpha2code': 'ES'}",club,,
+83,Leipzig,RB Leipzig,2975,Rasen Ballsport Leipzig,"{'name': 'Germany', 'id': '276', 'alpha3code': 'DEU', 'alpha2code': 'DE'}",club,51.3406321,12.3747329
+84,London,Arsenal,1609,Arsenal FC,"{'name': 'England', 'id': '0', 'alpha3code': 'XEN', 'alpha2code': ''}",club,51.4893335,-0.14405508452768728
+85,Caen,Caen,3783,Stade Malherbe Caen,"{'name': 'France', 'id': '250', 'alpha3code': 'FRA', 'alpha2code': 'FR'}",club,49.1813403,-0.3635615
+86,Toulouse,Toulouse,3780,Toulouse FC,"{'name': 'France', 'id': '250', 'alpha3code': 'FRA', 'alpha2code': 'FR'}",club,43.6044622,1.4442469
+87,Montpellier,Montpellier,3787,Montpellier HSC,"{'name': 'France', 'id': '250', 'alpha3code': 'FRA', 'alpha2code': 'FR'}",club,43.6112422,3.8767337
+88,Guingamp,Guingamp,3785,En Avant Guingamp,"{'name': 'France', 'id': '250', 'alpha3code': 'FRA', 'alpha2code': 'FR'}",club,48.5618483,-3.1502007
+89,Amiens,Amiens SC,3789,Amiens SC,"{'name': 'France', 'id': '250', 'alpha3code': 'FRA', 'alpha2code': 'FR'}",club,49.8941708,2.2956951
+90,Crotone,Crotone,3197,FC Crotone,"{'name': 'Italy', 'id': '380', 'alpha3code': 'ITA', 'alpha2code': 'IT'}",club,39.1873894,16.87828188895307
+91,Verona,Hellas Verona,3194,Hellas Verona FC,"{'name': 'Italy', 'id': '380', 'alpha3code': 'ITA', 'alpha2code': 'IT'}",club,45.4384958,10.9924122
+92,Genova,Genoa,3193,Genoa CFC,"{'name': 'Italy', 'id': '380', 'alpha3code': 'ITA', 'alpha2code': 'IT'}",club,44.40726,8.9338624
+93,Sevilla,Real Betis,684,Real Betis Balompi\u00e9,"{'name': 'Spain', 'id': '724', 'alpha3code': 'ESP', 'alpha2code': 'ES'}",club,37.3886303,-5.9953403
+94,Donostia-San Sebasti\u00e1n,Real Sociedad,687,Real Sociedad de F\u00fatbol,"{'name': 'Spain', 'id': '724', 'alpha3code': 'ESP', 'alpha2code': 'ES'}",club,,
+95,Sevilla,Sevilla,680,Sevilla FC,"{'name': 'Spain', 'id': '724', 'alpha3code': 'ESP', 'alpha2code': 'ES'}",club,37.3886303,-5.9953403
+96,Malaga,M\u00e1laga,683,M\u00e1laga Club de F\u00fatbol,"{'name': 'Spain', 'id': '724', 'alpha3code': 'ESP', 'alpha2code': 'ES'}",club,36.7213028,-4.4216366
+97,Villarreal,Villarreal,682,Villarreal Club de F\u00fatbol,"{'name': 'Spain', 'id': '724', 'alpha3code': 'ESP', 'alpha2code': 'ES'}",club,39.9372616,-0.1004465
+98,Seoul,Korea Republic,14855,Korea Republic,"{'name': 'Korea Republic', 'id': 410, 'alpha3code': 'KOR', 'alpha2code': 'KR'}",national,37.5666791,126.9782914
+99,Budapest,Hungary,10451,Hungary,"{'name': 'Hungary', 'id': 348, 'alpha3code': 'HUN', 'alpha2code': 'HU'}",national,47.4978918,19.0401609
+100,Istanbul,Turkey,4687,Turkey,"{'name': 'Turkey', 'id': 792, 'alpha3code': 'TUR', 'alpha2code': 'TR'}",national,41.0766019,29.052495
+101,Moskva,Russia,14358,Russia,"{'name': 'Russia', 'id': 643, 'alpha3code': 'RUS', 'alpha2code': 'RU'}",national,55.625578,37.6063916
+102,Solna,Sweden,7047,Sweden,"{'name': 'Sweden', 'id': 752, 'alpha3code': 'SWE', 'alpha2code': 'SE'}",national,59.361367,18.0013693
+103,El Menzah,Tunisia,16276,Tunisia,"{'name': 'Tunisia', 'id': 788, 'alpha3code': 'TUN', 'alpha2code': 'TN'}",national,36.8406161,10.17580217946147
+104,"Rio de Janeiro, Rio de Janeiro",Brazil,6380,Brazil,"{'name': 'Brazil', 'id': 76, 'alpha3code': 'BRA', 'alpha2code': 'BR'}",national,-22.9110137,-43.2093727
+105,Frankfurt am Main,Germany,3148,Germany,"{'name': 'Germany', 'id': 276, 'alpha3code': 'DEU', 'alpha2code': 'DE'}",national,50.1106444,8.6820917
+106,Tiran\u00eb (Tirana),Albania,8731,Albania,"{'name': 'Albania', 'id': 8, 'alpha3code': 'ALB', 'alpha2code': 'AL'}",national,,
+107,Bucure\u015fti,Romania,11944,Romania,"{'name': 'Romania', 'id': 642, 'alpha3code': 'ROU', 'alpha2code': 'RO'}",national,,
+108,Kyiv (Kiev),Ukraine,14622,Ukraine,"{'name': 'Ukraine', 'id': 804, 'alpha3code': 'UKR', 'alpha2code': 'UA'}",national,50.3842474,30.47428730013875
+109,Rabat,Morocco,16216,Morocco,"{'name': 'Morocco', 'id': 504, 'alpha3code': 'MAR', 'alpha2code': 'MA'}",national,34.02236,-6.8340222
+110,Bratislava,Slovakia,14496,Slovakia,"{'name': 'Slovakia', 'id': 703, 'alpha3code': 'SVK', 'alpha2code': 'SK'}",national,48.15926025,17.139658691421687
+111,Bogot\u00e1 D.C.,Colombia,12430,Colombia,"{'name': 'Colombia', 'id': 170, 'alpha3code': 'COL', 'alpha2code': 'CO'}",national,,
+112,Ciudad de Panam\u00e1,Panama,17929,Panama,"{'name': 'Panama', 'id': 591, 'alpha3code': 'PAN', 'alpha2code': 'PA'}",national,,
+113,Sydney,Australia,8493,Australia,"{'name': 'Australia', 'id': 36, 'alpha3code': 'AUS', 'alpha2code': 'AU'}",national,-33.768528,150.9568559523945
+114,"Buenos Aires, Ciudad de Buenos Aires",Argentina,12274,Argentina,"{'name': 'Argentina', 'id': 32, 'alpha3code': 'ARG', 'alpha2code': 'AR'}",national,-34.660961,-58.4839289
+115,Belfast,Northern Ireland,10962,Northern Ireland,"{'name': 'Northern Ireland', 'id': 0, 'alpha3code': 'XNI', 'alpha2code': ''}",national,54.596391,-5.9301829
+116,Lisboa,Portugal,9905,Portugal,"{'name': 'Portugal', 'id': 620, 'alpha3code': 'PRT', 'alpha2code': 'PT'}",national,38.7077507,-9.1365919
+117,Bruxelles (Brussel),Belgium,5629,Belgium,"{'name': 'Belgium', 'id': 56, 'alpha3code': 'BEL', 'alpha2code': 'BE'}",national,50.8550018,4.3512333761166175
+118,Br\u00f8ndby,Denmark,7712,Denmark,"{'name': 'Denmark', 'id': 208, 'alpha3code': 'DNK', 'alpha2code': 'DK'}",national,,
+119,Montevideo,Uruguay,15670,Uruguay,"{'name': 'Uruguay', 'id': 858, 'alpha3code': 'URY', 'alpha2code': 'UY'}",national,-34.9058916,-56.1913095
+120,Cardiff,Wales,10682,Wales,"{'name': 'Wales', 'id': 0, 'alpha3code': 'XWA', 'alpha2code': ''}",national,51.4816546,-3.1791934
+121,San Jos\u00e9,Costa Rica,16871,Costa Rica,"{'name': 'Costa Rica', 'id': 188, 'alpha3code': 'CRI', 'alpha2code': 'CR'}",national,,
+122,London,England,2413,England,"{'name': 'England', 'id': 0, 'alpha3code': 'XEN', 'alpha2code': ''}",national,51.4893335,-0.14405508452768728
+123,Cairo,Egypt,16129,Egypt,"{'name': 'Egypt', 'id': 818, 'alpha3code': 'EGY', 'alpha2code': 'EG'}",national,30.0443879,31.2357257
+124,T\u014dky\u014d (Tokyo),Japan,12913,Japan,"{'name': 'Japan', 'id': 392, 'alpha3code': 'JPN', 'alpha2code': 'JP'}",national,,
+125,Tehr\u0101n (Teheran),Iran,10840,Iran,"{'name': 'Iran', 'id': 364, 'alpha3code': 'IRN', 'alpha2code': 'IR'}",national,,
+126,Wien,Austria,9109,Austria,"{'name': 'Austria', 'id': 40, 'alpha3code': 'AUT', 'alpha2code': 'AT'}",national,48.2083537,16.3725042
+127,Reykjav\u00edk,Iceland,7839,Iceland,"{'name': 'Iceland', 'id': 352, 'alpha3code': 'ISL', 'alpha2code': 'IS'}",national,,
+128,Zagreb,Croatia,9598,Croatia,"{'name': 'Croatia', 'id': 191, 'alpha3code': 'HRV', 'alpha2code': 'HR'}",national,45.8130967,15.9772795
+129,"Coyoac\u00e1n, Ciudad de M\u00e9xico (D.F.)",Mexico,15473,Mexico,"{'name': 'Mexico', 'id': 484, 'alpha3code': 'MEX', 'alpha2code': 'MX'}",national,,
+130,Dublin,Republic of Ireland,8274,Republic of Ireland,"{'name': 'Ireland Republic', 'id': 372, 'alpha3code': 'IRL', 'alpha2code': 'IE'}",national,53.3493795,-6.2605593
+131,Praha,Czech Republic,11555,Czech Republic,"{'name': 'Czech Republic', 'id': 203, 'alpha3code': 'CZE', 'alpha2code': 'CZ'}",national,50.0596288,14.446459273258009
+132,Dakar,Senegal,19314,Senegal,"{'name': 'Senegal', 'id': 686, 'alpha3code': 'SEN', 'alpha2code': 'SN'}",national,14.693425,-17.447938
+133,Roma,Italy,3757,Italy,"{'name': 'Italy', 'id': 380, 'alpha3code': 'ITA', 'alpha2code': 'IT'}",national,41.8933203,12.4829321
+134,Lima,Peru,15594,Peru,"{'name': 'Peru', 'id': 604, 'alpha3code': 'PER', 'alpha2code': 'PE'}",national,-12.0621065,-77.0365256
+135,Paris,France,4418,France,"{'name': 'France', 'id': 250, 'alpha3code': 'FRA', 'alpha2code': 'FR'}",national,48.8534951,2.3483915
+136,Ar-Riy\u0101\u1e0d (Riyadh),Saudi Arabia,16521,Saudi Arabia,"{'name': 'Saudi Arabia', 'id': 682, 'alpha3code': 'SAU', 'alpha2code': 'SA'}",national,,
+137,Las Rozas,Spain,1598,Spain,"{'name': 'Spain', 'id': 724, 'alpha3code': 'ESP', 'alpha2code': 'ES'}",national,37.263677,-1.7944507
+138,Beograd,Serbia,17322,Serbia,"{'name': 'Serbia', 'id': 688, 'alpha3code': 'SRB', 'alpha2code': 'RS'}",national,44.8178131,20.4568974
+139,Bern,Switzerland,6697,Switzerland,"{'name': 'Switzerland', 'id': 756, 'alpha3code': 'CHE', 'alpha2code': 'CH'}",national,46.9484742,7.4521749
+140,Warszawa,Poland,13869,Poland,"{'name': 'Poland', 'id': 616, 'alpha3code': 'POL', 'alpha2code': 'PL'}",national,52.2319581,21.0067249
+141,Abuja,Nigeria,16823,Nigeria,"{'name': 'Nigeria', 'id': 566, 'alpha3code': 'NGA', 'alpha2code': 'NG'}",national,9.0643305,7.4892974
