@@ -434,7 +434,7 @@ def main2():
     playerank_grouping['minutes_per_goal'] = round(playerank_grouping['minutesPlayed'] / playerank_grouping['goalScored'], 1)
     playerank_grouping['minutes_per_goal'] = playerank_grouping['minutes_per_goal'].replace([float('inf')], 0)
 
-    #playerank_grouping
+    playerank_grouping = playerank_grouping[playerank_grouping['minutesPlayed'] >= 100000]
 
     # creating a tri-plot viz that gives a little more clarity on the goals scored by each player role
     # and the goals per minutes ratio
