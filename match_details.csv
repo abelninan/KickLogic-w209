@@ -1,0 +1,97 @@
+game_id,team_1,team_2,competition_name,game_date
+2500003.0,Newcastle United,Liverpool,English first division,3/3/2018 17:30
+2500004.0,Chelsea,Manchester City,English first division,3/4/2018 16:00
+2500005.0,Stoke City,Southampton,English first division,3/3/2018 15:00
+2500006.0,West Ham United,Swansea City,English first division,3/3/2018 15:00
+2500007.0,Huddersfield Town,Tottenham Hotspur,English first division,3/3/2018 15:00
+2500008.0,West Bromwich Albion,Watford,English first division,3/3/2018 15:00
+2500009.0,AFC Bournemouth,Tottenham Hotspur,English first division,3/11/2018 16:00
+2500010.0,Watford,Arsenal,English first division,3/11/2018 13:30
+2500011.0,Chelsea,Crystal Palace,English first division,3/10/2018 17:30
+2500012.0,Everton,Brighton & Hove Albion,English first division,3/10/2018 15:00
+2500013.0,Huddersfield Town,Swansea City,English first division,3/10/2018 15:00
+2500014.0,Manchester United,Liverpool,English first division,3/10/2018 12:30
+2500015.0,Newcastle United,Southampton,English first division,3/10/2018 15:00
+2500016.0,Stoke City,Manchester City,English first division,3/12/2018 20:00
+2500017.0,Leicester City,West Bromwich Albion,English first division,3/10/2018 15:00
+2500018.0,Burnley,West Ham United,English first division,3/10/2018 15:00
+2500019.0,West Bromwich Albion,AFC Bournemouth,English first division,3/17/2018 14:00
+2500020.0,Chelsea,Burnley,English first division,4/19/2018 18:45
+2500021.0,Crystal Palace,Huddersfield Town,English first division,3/17/2018 15:00
+2500022.0,Arsenal,Leicester City,English first division,5/9/2018 18:45
+2500023.0,Watford,Liverpool,English first division,3/17/2018 17:30
+2500024.0,Brighton & Hove Albion,Manchester City,English first division,5/9/2018 19:00
+2500025.0,Stoke City,Everton,English first division,3/17/2018 14:00
+2500026.0,Southampton,Swansea City,English first division,5/8/2018 18:45
+2500027.0,Newcastle United,Tottenham Hotspur,English first division,5/9/2018 19:00
+2500028.0,Manchester United,West Ham United,English first division,5/10/2018 18:45
+2500029.0,Arsenal,Stoke City,English first division,4/1/2018 12:30
+2500030.0,Leicester City,Brighton & Hove Albion,English first division,3/31/2018 14:00
+2500031.0,Chelsea,Tottenham Hotspur,English first division,4/1/2018 15:00
+2500032.0,Crystal Palace,Liverpool,English first division,3/31/2018 11:30
+2500033.0,Everton,Manchester City,English first division,3/31/2018 16:30
+2500034.0,Manchester United,Swansea City,English first division,3/31/2018 14:00
+2500035.0,Newcastle United,Huddersfield Town,English first division,3/31/2018 14:00
+2500036.0,Southampton,West Ham United,English first division,8/19/2017 14:00
+2500037.0,AFC Bournemouth,Watford,English first division,3/31/2018 14:00
+2500038.0,Burnley,West Bromwich Albion,English first division,3/31/2018 14:00
+2500039.0,AFC Bournemouth,Crystal Palace,English first division,4/7/2018 14:00
+2500040.0,Southampton,Arsenal,English first division,4/8/2018 13:15
+2500041.0,Huddersfield Town,Brighton & Hove Albion,English first division,4/7/2018 14:00
+2500042.0,Chelsea,West Ham United,English first division,4/8/2018 15:30
+2500043.0,Everton,Liverpool,English first division,4/7/2018 11:30
+2500044.0,Leicester City,Newcastle United,English first division,4/7/2018 14:00
+2500045.0,Manchester United,Manchester City,English first division,4/7/2018 16:30
+2500046.0,Tottenham Hotspur,Stoke City,English first division,4/7/2018 14:00
+2500047.0,Watford,Burnley,English first division,4/7/2018 14:00
+2500048.0,Swansea City,West Bromwich Albion,English first division,4/7/2018 14:00
+2500049.0,Burnley,Leicester City,English first division,4/14/2018 14:00
+2500050.0,Brighton & Hove Albion,Crystal Palace,English first division,4/14/2018 14:00
+2500051.0,Watford,Huddersfield Town,English first division,4/14/2018 14:00
+2500052.0,Liverpool,AFC Bournemouth,English first division,4/14/2018 16:30
+2500053.0,West Bromwich Albion,Manchester United,English first division,4/15/2018 15:00
+2500054.0,Newcastle United,Arsenal,English first division,4/15/2018 12:30
+2500055.0,Chelsea,Southampton,English first division,4/14/2018 11:30
+2500056.0,Everton,Swansea City,English first division,4/14/2018 14:00
+2500057.0,Manchester City,Tottenham Hotspur,English first division,4/14/2018 18:45
+2500058.0,Stoke City,West Ham United,English first division,4/16/2018 19:00
+2500059.0,Manchester United,AFC Bournemouth,English first division,4/18/2018 18:45
+2500060.0,Arsenal,West Ham United,English first division,4/22/2018 12:30
+2500061.0,Brighton & Hove Albion,Tottenham Hotspur,English first division,4/17/2018 18:45
+2500062.0,Chelsea,Huddersfield Town,English first division,5/9/2018 18:45
+2500063.0,Newcastle United,Everton,English first division,4/23/2018 19:00
+2500064.0,Leicester City,Southampton,English first division,4/19/2018 18:45
+2500065.0,Manchester City,Swansea City,English first division,4/22/2018 15:30
+2500066.0,Stoke City,Burnley,English first division,4/22/2018 12:30
+2500067.0,Watford,Crystal Palace,English first division,4/21/2018 14:00
+2500068.0,Liverpool,West Bromwich Albion,English first division,4/21/2018 11:30
+2500069.0,Burnley,Brighton & Hove Albion,English first division,4/28/2018 14:00
+2500070.0,Leicester City,Crystal Palace,English first division,4/28/2018 14:00
+2500071.0,Everton,Huddersfield Town,English first division,4/28/2018 14:00
+2500072.0,Stoke City,Liverpool,English first division,4/28/2018 11:30
+2500073.0,Arsenal,Manchester United,English first division,4/29/2018 15:30
+2500074.0,West Bromwich Albion,Newcastle United,English first division,4/28/2018 14:00
+2500075.0,AFC Bournemouth,Southampton,English first division,4/28/2018 14:00
+2500076.0,Chelsea,Swansea City,English first division,4/28/2018 16:30
+2500077.0,Watford,Tottenham Hotspur,English first division,4/30/2018 19:00
+2500078.0,West Ham United,Manchester City,English first division,4/29/2018 13:15
+2500079.0,AFC Bournemouth,Swansea City,English first division,5/5/2018 14:00
+2500080.0,Arsenal,Burnley,English first division,5/6/2018 15:30
+2500081.0,Manchester United,Brighton & Hove Albion,English first division,5/4/2018 19:00
+2500082.0,Liverpool,Chelsea,English first division,5/6/2018 15:30
+2500083.0,Southampton,Everton,English first division,5/5/2018 16:30
+2500084.0,West Ham United,Leicester City,English first division,5/5/2018 14:00
+2500085.0,Manchester City,Huddersfield Town,English first division,5/6/2018 12:30
+2500086.0,Crystal Palace,Stoke City,English first division,5/5/2018 11:30
+2500087.0,Watford,Newcastle United,English first division,5/5/2018 14:00
+2500088.0,West Bromwich Albion,Tottenham Hotspur,English first division,5/5/2018 14:00
+2500089.0,AFC Bournemouth,Burnley,English first division,5/13/2018 14:00
+2500090.0,Crystal Palace,West Bromwich Albion,English first division,5/13/2018 14:00
+2500091.0,Huddersfield Town,Arsenal,English first division,5/13/2018 14:00
+2500092.0,Liverpool,Brighton & Hove Albion,English first division,5/13/2018 14:00
+2500093.0,Manchester United,Watford,English first division,5/13/2018 14:00
+2500094.0,Chelsea,Newcastle United,English first division,5/13/2018 14:00
+2500095.0,Manchester City,Southampton,English first division,5/13/2018 14:00
+2500096.0,Swansea City,Stoke City,English first division,5/13/2018 14:00
+2500097.0,Tottenham Hotspur,Leicester City,English first division,5/13/2018 14:00
+2500098.0,West Ham United,Everton,English first division,5/13/2018 14:00
