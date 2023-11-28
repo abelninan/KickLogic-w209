@@ -448,7 +448,7 @@ def main2():
         y = alt.Y('minutesPlayed', title='Minutes Played'),
         color = alt.Color('roleCluster:N', legend=alt.Legend(title='Player Roles')),
         tooltip = ['roleCluster:N', 'goalScored:Q', 'minutesPlayed:Q']
-    ).add_params(selection).properties(height = 520, width = 400)
+    ).add_params(selection).properties(height = 520, width = 400, title='Minutes Played vs Goals Scored for each Distinct Role')
 
 
     # histogram of goals scored per player role
@@ -457,14 +457,14 @@ def main2():
         y = alt.Y('roleCluster', title='Player Roles'),
         color = alt.condition(selection, 'roleCluster:N', alt.value('lightgray')),
         tooltip = ['goalScored:Q']
-    ).transform_filter(selection).properties(width = 400)
+    ).transform_filter(selection).properties(width = 400, title='Clearer Examination of Goals Scored')
 
     bar_2 = alt.Chart(playerank_grouping).mark_bar().encode(
         x = alt.X('minutesPlayed', title='Minutes Played'),
         y = alt.Y('roleCluster', title='Player Roles'),
         color = alt.condition(selection, 'roleCluster:N', alt.value('lightgray')),
         tooltip = ['minutesPlayed:Q']
-    ).transform_filter(selection).properties(width = 400)
+    ).transform_filter(selection).properties(width = 400, title='Clearer Examination of Minutes Played')
 
     # ratio of minutes per goal per player role
     bar_3 = alt.Chart(playerank_grouping).mark_bar().encode(
@@ -472,7 +472,7 @@ def main2():
         y = alt.Y('roleCluster', title='Player Roles'),
         color = alt.condition(selection, 'roleCluster:N', alt.value('lightgray')),
         tooltip = ['minutes_per_goal:Q']
-    ).transform_filter(selection).properties(width = 400)
+    ).transform_filter(selection).properties(width = 400, title='Goal-Scoring Frequency')
 
 
     # combining all 3 plots
