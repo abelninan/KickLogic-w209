@@ -478,6 +478,10 @@ def main2():
     combined_plot_2 = alt.vconcat(dot_plot, bar_2, bar_1, bar_3)
 
     combined_plot_2
+
+    st.write('## Testing Player Metrics')
+    st.write('##### *Going to put selectbox and metrics below*')
+    st.write('\n')
         
 def calc_action_weight(result_name, type_name):
 
