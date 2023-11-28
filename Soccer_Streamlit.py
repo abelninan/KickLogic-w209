@@ -482,6 +482,9 @@ def main2():
     st.write('## Testing Player Metrics')
     st.write('##### *Going to put selectbox and metrics below*')
     st.write('\n')
+
+    role_stats = load_data('streamlit_stats.csv')
+    st.dataframe(role_stats)
         
 def calc_action_weight(result_name, type_name):
 
