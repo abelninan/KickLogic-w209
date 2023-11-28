@@ -483,11 +483,12 @@ def main2():
     st.write('##### *Going to put selectbox and metrics below*')
     st.write('\n')
     
-    role_stats = load_data('streamlit_stats.csv')
-    st.dataframe(role_stats)
+    role_stats_2 = load_data('streamlit_stats_2.csv')
 
-    clean_positions = sorted(role_stats['clean_position'].unique())
+    clean_positions = sorted(role_stats_2['clean_position'].unique())
     position_choice = st.selectbox('Choose a Player Position:', clean_positions)
+
+    st.dataframe(role_stats_2)
     
 def calc_action_weight(result_name, type_name):
 
