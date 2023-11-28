@@ -466,7 +466,7 @@ def main2():
         tooltip = ['minutesPlayed:Q']
     ).transform_filter(selection).properties(width = 400, title='Clearer Examination of Minutes Played')
 
-    ratio of minutes per goal per player role
+    # ratio of minutes per goal per player role
     bar_3 = alt.Chart(playerank_grouping).mark_bar().encode(
         x = alt.X('minutes_per_goal', title='Ratio of Minutes Per Goal'),
         y = alt.Y('roleCluster', title='Player Roles'),
