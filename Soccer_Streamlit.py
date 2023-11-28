@@ -466,23 +466,23 @@ def main2():
         tooltip = ['minutesPlayed:Q']
     ).transform_filter(selection).properties(width = 400, title='Clearer Examination of Minutes Played')
 
-    # ratio of minutes per goal per player role
-    # bar_3 = alt.Chart(playerank_grouping).mark_bar().encode(
-    #     x = alt.X('minutes_per_goal', title='Ratio of Minutes Per Goal'),
-    #     y = alt.Y('roleCluster', title='Player Roles'),
-    #     color = alt.condition(selection, 'roleCluster:N', alt.value('lightgray')),
-    #     tooltip = ['minutes_per_goal:Q']
-    # ).transform_filter(selection).properties(width = 400, title='Goal-Scoring Frequency')
-
+    ratio of minutes per goal per player role
     bar_3 = alt.Chart(playerank_grouping).mark_bar().encode(
-        x=alt.X('minutes_per_goal', title='Ratio of Minutes Per Goal'),
-        y=alt.Y('roleCluster', title='Player Roles'),
-        color=alt.condition(selection, 'roleCluster:N', alt.value('lightgray')),
-        tooltip=['minutes_per_goal:Q']
-    ).transform_filter(selection).properties(width=400, title='Goal-Scoring Frequency').configure_title(
-        fontSize=12,  # Set the font size for the title
-        subtitle='Number of Minutes Needed for Each Goal Scored'  # Add a subtitle
-    )
+        x = alt.X('minutes_per_goal', title='Ratio of Minutes Per Goal'),
+        y = alt.Y('roleCluster', title='Player Roles'),
+        color = alt.condition(selection, 'roleCluster:N', alt.value('lightgray')),
+        tooltip = ['minutes_per_goal:Q']
+    ).transform_filter(selection).properties(width = 400, title='Goal-Scoring Frequency')
+
+    # bar_3 = alt.Chart(playerank_grouping).mark_bar().encode(
+    #     x=alt.X('minutes_per_goal', title='Ratio of Minutes Per Goal'),
+    #     y=alt.Y('roleCluster', title='Player Roles'),
+    #     color=alt.condition(selection, 'roleCluster:N', alt.value('lightgray')),
+    #     tooltip=['minutes_per_goal:Q']
+    # ).transform_filter(selection).properties(width=400, title='Goal-Scoring Frequency').configure_title(
+    #     fontSize=12,  # Set the font size for the title
+    #     subtitle='Number of Minutes Needed for Each Goal Scored'  # Add a subtitle
+    # )
 
     # combining all 3 plots
     combined_plot_2 = alt.vconcat(dot_plot, bar_2, bar_1, bar_3)
