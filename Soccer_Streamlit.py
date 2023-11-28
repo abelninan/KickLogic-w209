@@ -488,6 +488,8 @@ def main2():
 
     clean_positions  = sorted(role_stats['clean_position'].unique())
     position_choice = st.selectbox('Choose a Player Position:', clean_positions)
+
+    #new changes
         
 def calc_action_weight(result_name, type_name):
 
