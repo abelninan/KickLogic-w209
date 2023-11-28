@@ -472,7 +472,7 @@ def main2():
         y = alt.Y('roleCluster', title='Player Roles'),
         color = alt.condition(selection, 'roleCluster:N', alt.value('lightgray')),
         tooltip = ['minutes_per_goal:Q']
-    ).transform_filter(selection).properties(width = 400, title='Goal-Scoring Frequency', subtitle='testing')
+    ).transform_filter(selection).properties(width = 400, title='Goal-Scoring Frequency')
 
 
     # combining all 3 plots
