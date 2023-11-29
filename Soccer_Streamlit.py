@@ -479,16 +479,37 @@ def main2():
 
     combined_plot_2
 
-    st.write('## Testing Player Metrics')
-    st.write('##### *Going to put selectbox and metrics below*')
-    st.write('\n')
-    
-    role_stats_2 = load_data('streamlit_stats_2.csv')
+    st.write('## Advanced Player Metrics')
 
+    role_stats_2 = load_data('streamlit_stats_2.csv')
+    
     clean_positions = sorted(role_stats_2['clean_position'].unique())
     position_choice = st.selectbox('Choose a Player Position:', clean_positions)
-
-    st.dataframe(role_stats_2)
+    st.write('\n')
+    #st.dataframe(role_stats_2)
+    
+    for position in clean_positions:
+        if position_choice == position:
+            
+            #st.metric(label="Avg Overall", value=role_stats_2.loc[role_stats_2['clean_position'] == position_choice, 'potential'].values[0])
+            st.write('##### *Monetary Value of This Position*')
+            col1, col2 = st.columns(2)
+            total_value = '€ {:,.0f}'.format(role_stats_2.loc[role_stats_2['clean_position'] == position_choice, 'value_eur'].values[0])
+            col1.metric(label="Total Value of Players (Euros)", value=total_value)
+            avg_wage = '€ {:,.2f}'.format(role_stats_2.loc[role_stats_2['clean_position'] == position_choice, 'wage_eur'].values[0])
+            col2.metric(label="Average Wage Per Player Per Game (Euros)", value=avg_wage)
+            
+            st.write('\n')
+            st.write('##### *Athletic Characteristics of This Position*')
+            col4, col5, col6 = st.columns(3)
+            col4.metric(label="Pace", value=role_stats_2.loc[role_stats_2['clean_position'] == position_choice, 'pace'].values[0])
+            col5.metric(label="Shooting", value=role_stats_2.loc[role_stats_2['clean_position'] == position_choice, 'shooting'].values[0])
+            col6.metric(label="Passing", value=role_stats_2.loc[role_stats_2['clean_position'] == position_choice, 'passing'].values[0])
+            
+            col7, col8, col9 = st.columns(3)
+            col7.metric(label="Dribbling", value=role_stats_2.loc[role_stats_2['clean_position'] == position_choice, 'dribbling'].values[0])
+            col8.metric(label="Defending", value=role_stats_2.loc[role_stats_2['clean_position'] == position_choice, 'defending'].values[0])
+            col9.metric(label="Physic", value=role_stats_2.loc[role_stats_2['clean_position'] == position_choice, 'physic'].values[0])
     
 def calc_action_weight(result_name, type_name):
 
