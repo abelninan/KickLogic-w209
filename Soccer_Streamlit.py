@@ -745,12 +745,12 @@ def main4():
 
 def main():
     st.title('KickLogic - Soccer Analytics')
-    app_choice = st.selectbox('Choose Page to Navigate To:', ['Home', 'Player Role', 'Match', 'Player Valuation', 'Club'])
-    if app_choice == 'Player Role':
+    app_choice = st.selectbox('Choose Page to Navigate To:', ['Home', 'Player Role Analysis', 'Match Analysis', 'Player Valuation Analysis', 'Club Analysis'])
+    if app_choice == 'Player Role Analysis':
         main2()
-    elif app_choice == 'Match':
+    elif app_choice == 'Match Analysis':
         main1()
-    elif app_choice == 'Club':
+    elif app_choice == 'Club Analysis':
         main3()
     elif app_choice == 'Home':
         main4()
