@@ -715,15 +715,24 @@ def main3():
     
     st.altair_chart(create_team_comparison_charts(team_metrics_df, team_metrics), use_container_width=True)
 
+def main4():
+    st.write("# Introduction")
+
+    st.write('\n')
+
+    st.write("## About Us")
+
 def main():
     st.title('KickLogic - Soccer Analytics')
-    app_choice = st.selectbox('Choose your analysis type:', ['Player Role', 'Match', 'Player Valuation', 'Club'])
+    app_choice = st.selectbox('Choose your analysis type:', ['Home', 'Player Role', 'Match', 'Player Valuation', 'Club'])
     if app_choice == 'Player Role':
         main2()
     elif app_choice == 'Match':
         main1()
     elif app_choice == 'Club':
         main3()
+    elif app_choice == 'Home':
+        main4()
 
 if __name__ == '__main__':
     main()
