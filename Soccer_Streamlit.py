@@ -752,7 +752,7 @@ def main():
         main1()
     elif app_choice_2 == 'Club Analysis':
         main3()
-    elif app_choice_2 == 'Home Analysis':
+    elif app_choice_2 == 'Home':
         main4()
 
 if __name__ == '__main__':
