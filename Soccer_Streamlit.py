@@ -6,8 +6,8 @@ import streamlit as st
 import pandas as pd
 import altair as alt
 import numpy as np
-#import plotly
-#import plotly.graph_objects as go
+# import plotly
+# import plotly.graph_objects as go
 # from geopy.geocoders import Nominatim
 # from ctypes import alignment
 # from vega_datasets import data
@@ -514,23 +514,23 @@ def main2():
             col9.metric(label="Physic", value=role_stats_2.loc[role_stats_2['clean_position'] == position_choice, 'physic'].values[0])
 
     # new changes
-    fig2 = go.Figure(go.Indicator(
-        domain = {'x': [0, 1], 'y': [0, 1]},
-        value = 450,
-        mode = "gauge+number",
-        title = {'text': "Resume Length"},
-        #delta = {'reference': 300},
-        gauge = {'axis': {'range': [0, 600]},
-             'bar': {'color': 'navy'},
-             'steps' : [
-                 {'range': [0, 350], 'color': "whitesmoke"},
-                 {'range': [350, 550], 'color': "green"},
-                 {'range': [550, 600], 'color': "darkred"}]
-             }))
+    # fig2 = go.Figure(go.Indicator(
+    #     domain = {'x': [0, 1], 'y': [0, 1]},
+    #     value = 450,
+    #     mode = "gauge+number",
+    #     title = {'text': "Resume Length"},
+    #     #delta = {'reference': 300},
+    #     gauge = {'axis': {'range': [0, 600]},
+    #          'bar': {'color': 'navy'},
+    #          'steps' : [
+    #              {'range': [0, 350], 'color': "whitesmoke"},
+    #              {'range': [350, 550], 'color': "green"},
+    #              {'range': [550, 600], 'color': "darkred"}]
+    #          }))
 
-    fig2.update_layout(paper_bgcolor = "white", font = {'color': "black", 'family': "Arial"})
+    # fig2.update_layout(paper_bgcolor = "white", font = {'color': "black", 'family': "Arial"})
 
-    st.plotly_chart(fig2)
+    # st.plotly_chart(fig2)
     
 def calc_action_weight(result_name, type_name):
 
@@ -763,23 +763,23 @@ def main4():
     st.write('\n')
     
     # new changes
-    fig = go.Figure(go.Indicator(
-    domain = {'x': [0, 1], 'y': [0, 1]},
-    value = 450,
-    mode = "gauge+number",
-    title = {'text': "Resume Length"},
-    #delta = {'reference': 300},
-    gauge = {'axis': {'range': [0, 600]},
-             'bar': {'color': 'navy'},
-             'steps' : [
-                 {'range': [0, 350], 'color': "whitesmoke"},
-                 {'range': [350, 550], 'color': "green"},
-                 {'range': [550, 600], 'color': "darkred"}]
-             }))
+    # fig = go.Figure(go.Indicator(
+    # domain = {'x': [0, 1], 'y': [0, 1]},
+    # value = 450,
+    # mode = "gauge+number",
+    # title = {'text': "Resume Length"},
+    # #delta = {'reference': 300},
+    # gauge = {'axis': {'range': [0, 600]},
+    #          'bar': {'color': 'navy'},
+    #          'steps' : [
+    #              {'range': [0, 350], 'color': "whitesmoke"},
+    #              {'range': [350, 550], 'color': "green"},
+    #              {'range': [550, 600], 'color': "darkred"}]
+    #          }))
 
-    fig.update_layout(paper_bgcolor = "white", font = {'color': "black", 'family': "Arial"})
+    # fig.update_layout(paper_bgcolor = "white", font = {'color': "black", 'family': "Arial"})
 
-    st.plotly_chart(fig)
+    # st.plotly_chart(fig)
 
     st.write("## About Us")
 
