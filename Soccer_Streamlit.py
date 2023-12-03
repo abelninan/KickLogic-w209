@@ -6,8 +6,8 @@ import streamlit as st
 import pandas as pd
 import altair as alt
 import numpy as np
-import plotly
-#import plotly.graph_objects as go
+#import plotly
+import plotly.graph_objects as go
 # from geopy.geocoders import Nominatim
 # from ctypes import alignment
 # from vega_datasets import data
