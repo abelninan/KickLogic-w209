@@ -513,6 +513,7 @@ def main2():
             col8.metric(label="Defending", value=role_stats_2.loc[role_stats_2['clean_position'] == position_choice, 'defending'].values[0])
             col9.metric(label="Physic", value=role_stats_2.loc[role_stats_2['clean_position'] == position_choice, 'physic'].values[0])
 
+    # new changes
     fig2 = go.Figure(go.Indicator(
         domain = {'x': [0, 1], 'y': [0, 1]},
         value = 450,
@@ -760,7 +761,8 @@ def main4():
     st.write("# Introduction")
 
     st.write('\n')
-
+    
+    # new changes
     fig = go.Figure(go.Indicator(
     domain = {'x': [0, 1], 'y': [0, 1]},
     value = 450,
