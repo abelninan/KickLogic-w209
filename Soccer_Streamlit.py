@@ -6,6 +6,8 @@ import streamlit as st
 import pandas as pd
 import altair as alt
 import numpy as np
+
+
 # Function to load data
 @st.cache_data  # This function will be cached
 def load_data(path):
