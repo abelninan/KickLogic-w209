@@ -742,7 +742,7 @@ def main4():
 
     st.write(
     """
-    Welcome to our Soccer Analytics Dashboard, your premier destination for in-depth insights into the dynamic world of soccer. Dive into the heart of the beautiful game with our cutting-edge platform, where data meets passion to deliver a comprehensive view of every match, player, and team. Unleashing the power of advanced analytics, we transform raw statistics into meaningful narratives, providing fans, analysts, and enthusiasts alike with a rich tapestry of information. Whether you're a dedicated supporter seeking a deeper understanding of your favorite team's performance or a strategic mind looking to unravel the tactical nuances of the game, our dashboard empowers you to explore, analyze, and celebrate the sport you love. Join us on this exhilarating journey through the numbers, where the game comes to life in ways you've never experienced before.
+    Welcome to KickLogic, your premier destination for in-depth insights into the dynamic world of soccer. Dive into the heart of the beautiful game with our cutting-edge platform, where data meets passion to deliver a comprehensive view of every match, player, and team. Unleashing the power of advanced analytics, we transform raw statistics into meaningful narratives, providing fans, analysts, and enthusiasts alike with a rich tapestry of information. Whether you're a dedicated supporter seeking a deeper understanding of your favorite team's performance or a strategic mind looking to unravel the tactical nuances of the game, our dashboard empowers you to explore, analyze, and celebrate the sport you love. Join us on this exhilarating journey through the numbers, where the game comes to life in ways you've never experienced before.
     """
     )
 
@@ -750,7 +750,7 @@ def main4():
 
     st.write(
     """
-    Our Soccer Analytics Dashboard is designed to cater to a diverse audience of soccer aficionados. Fans will find a treasure trove of statistics and visualizations that enhance their enjoyment of the game, offering a deeper understanding of players' contributions and team dynamics. Coaches and analysts can leverage our platform to dissect performance metrics, track player development, and refine strategic approaches. Fantasy football enthusiasts will discover invaluable insights for informed team selection. Additionally, scouts and professionals within the soccer industry can utilize our advanced analytics to identify emerging talent and make data-driven decisions. No matter your connection to the sport, our dashboard is your gateway to a more insightful and immersive soccer experience.
+    KickLogic is designed to cater to a diverse audience of soccer aficionados. Fans will find a treasure trove of statistics and visualizations that enhance their enjoyment of the game, offering a deeper understanding of players' contributions and team dynamics. Coaches and analysts can leverage our platform to dissect performance metrics, track player development, and refine strategic approaches. Fantasy football enthusiasts will discover invaluable insights for informed team selection. Additionally, scouts and professionals within the soccer industry can utilize our advanced analytics to identify emerging talent and make data-driven decisions. No matter your connection to the sport, our dashboard is your gateway to a more insightful and immersive soccer experience.
     """
     )
     
