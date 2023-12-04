@@ -756,13 +756,13 @@ def main4():
     
     st.write("## Data Sources")
     
-    st.markdown("""The dateset utilitzed to create this interavtive web-app originated from [Kaggle](https://www.kaggle.com/datasets/aleespinosa/soccer-match-event-dataset)""")
+    st.markdown("""The dataset utilized to create this interavtive web-app originated from [Kaggle](https://www.kaggle.com/datasets/aleespinosa/soccer-match-event-dataset)""")
     
     st.write("## Meet The Creators")
 
     st.markdown("""
-    1. **Abel Ninan** *(email)*
-    2. **Dan Nealon** *(email)*
+    1. **Abel Ninan** *(abelninan@berkeley.edu)*
+    2. **Dan Nealon** *(dan.nealon@berkeley.edu)*
     3. **Paul Cooper** *(email)*
     4. **Brian Tung** *(email)*
     """)
