@@ -740,8 +740,16 @@ def main5():
 def main4():
     st.write("## Introduction")
 
-    st.write('\n')
+    st.write(
+    """
+    Welcome to our Soccer Analytics Dashboard, your premier destination for in-depth insights into the dynamic world of soccer. Dive into the heart of the beautiful game with our cutting-edge platform, where data meets passion to deliver a comprehensive view of every match, player, and team. Unleashing the power of advanced analytics, we transform raw statistics into meaningful narratives, providing fans, analysts, and enthusiasts alike with a rich tapestry of information. Whether you're a dedicated supporter seeking a deeper understanding of your favorite team's performance or a strategic mind looking to unravel the tactical nuances of the game, our dashboard empowers you to explore, analyze, and celebrate the sport you love. Join us on this exhilarating journey through the numbers, where the game comes to life in ways you've never experienced before.
+    """
+    )
 
+    st.write("## Intended Audience")
+
+    st.write("## Data Sources")
+    
     st.write("## About Us")
 
     st.markdown("""
