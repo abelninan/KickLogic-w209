@@ -744,6 +744,13 @@ def main4():
 
     st.write("## About Us")
 
+    st.markdown("""
+    * **Abel Ninan** *(email)*
+    * **Dan Nealon** *(email)*
+    * **Paul Cooper** *(email)*
+    * **Brian Tung** *(email)*
+    """)
+
 def main():
     st.set_page_config(page_title="KickLogic", page_icon=":soccer:", layout = "centered")
     st.title('KickLogic - Soccer Analytics')
