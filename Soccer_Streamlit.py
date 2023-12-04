@@ -735,7 +735,8 @@ def main3():
     st.altair_chart(create_team_comparison_charts(team_metrics_df, team_metrics), use_container_width=True)
 
 def main4():
-    st.write("# Introduction")
+    st.title('KickLogic - Soccer Analytics')
+    st.write("## Introduction")
 
     st.write('\n')
 
