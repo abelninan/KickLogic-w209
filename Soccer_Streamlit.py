@@ -743,7 +743,7 @@ def main4():
     st.write("## About Us")
 
 def main():
-    st.title('KickLogic - Soccer Analytics')
+    # st.title('KickLogic - Soccer Analytics')
     app_choice_2 = st.selectbox('Choose Page to Navigate To:', ['Home', 'Player Role Analysis', 'Match Analysis', 'Player Valuation Analysis', 'Club Analysis'])
     if app_choice_2 == 'Player Role Analysis':
         main2()
