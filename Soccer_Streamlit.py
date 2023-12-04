@@ -745,10 +745,10 @@ def main4():
     st.write("## About Us")
 
     st.markdown("""
-    **Abel Ninan** *(email)*
-    **Dan Nealon** *(email)*
-    **Paul Cooper** *(email)*
-    **Brian Tung** *(email)*
+    1. **Abel Ninan** *(email)*
+    2. **Dan Nealon** *(email)*
+    3. **Paul Cooper** *(email)*
+    4. **Brian Tung** *(email)*
     """)
 
 def main():
