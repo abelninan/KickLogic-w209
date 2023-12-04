@@ -734,6 +734,9 @@ def main3():
     
     st.altair_chart(create_team_comparison_charts(team_metrics_df, team_metrics), use_container_width=True)
 
+def main5():
+    st.write("## Brian's Page")
+
 def main4():
     st.title('KickLogic - Soccer Analytics')
     st.write("## Introduction")
@@ -742,17 +745,35 @@ def main4():
 
     st.write("## About Us")
 
+# def main():
+#     # st.title('KickLogic - Soccer Analytics')
+#     app_choice_2 = st.selectbox('Choose Page to Navigate To:', ['Home', 'Player Role Analysis', 'Match Analysis', 'Player Valuation Analysis', 'Club Analysis'])
+#     if app_choice_2 == 'Player Role Analysis':
+#         main2()
+#     elif app_choice_2 == 'Match Analysis':
+#         main1()
+#     elif app_choice_2 == 'Club Analysis':
+#         main3()
+#     elif app_choice_2 == 'Home':
+#         main4()
+
 def main():
-    # st.title('KickLogic - Soccer Analytics')
-    app_choice_2 = st.selectbox('Choose Page to Navigate To:', ['Home', 'Player Role Analysis', 'Match Analysis', 'Player Valuation Analysis', 'Club Analysis'])
-    if app_choice_2 == 'Player Role Analysis':
-        main2()
-    elif app_choice_2 == 'Match Analysis':
-        main1()
-    elif app_choice_2 == 'Club Analysis':
-        main3()
-    elif app_choice_2 == 'Home':
+    st.set_page_config(page_title="KickLogic", page_icon="✨", layout = "centered")
+
+    # Create tabs at the top
+    tab1,tab2,tab3,tab4,tab5 = st.tabs(["Home", "Player-Positon Analysis", "Match Analysis", "Club Analysis", "Player Valuation Analysis"])
+
+    # Check which tab is selected and show the corresponding page
+    with tab1:
         main4()
+    with tab2:
+        main2()
+    with tab3:
+        main1()
+    with tab4:
+        main3()
+    with tab5:
+        main5()
 
 if __name__ == '__main__':
     main()
