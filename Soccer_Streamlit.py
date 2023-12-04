@@ -745,7 +745,7 @@ def main4():
     st.write("## About Us")
 
 def main():
-    st.set_page_config(page_title="KickLogic", page_icon="✨", layout = "centered")
+    st.set_page_config(page_title="KickLogic", page_icon=":soccer:", layout = "centered")
     st.title('KickLogic - Soccer Analytics')
     app_choice_2 = st.selectbox('Choose Page to Navigate To:', ['Home', 'Player Role Analysis', 'Match Analysis', 'Player Valuation Analysis', 'Club Analysis'])
     if app_choice_2 == 'Player Role Analysis':
