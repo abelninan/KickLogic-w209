@@ -748,6 +748,12 @@ def main4():
 
     st.write("## Intended Audience")
 
+    st.write(
+    """
+    Our Soccer Analytics Dashboard is designed to cater to a diverse audience of soccer aficionados. Fans will find a treasure trove of statistics and visualizations that enhance their enjoyment of the game, offering a deeper understanding of players' contributions and team dynamics. Coaches and analysts can leverage our platform to dissect performance metrics, track player development, and refine strategic approaches. Fantasy football enthusiasts will discover invaluable insights for informed team selection. Additionally, scouts and professionals within the soccer industry can utilize our advanced analytics to identify emerging talent and make data-driven decisions. No matter your connection to the sport, our dashboard is your gateway to a more insightful and immersive soccer experience.
+    """
+    )
+    
     st.write("## Data Sources")
     
     st.write("## About Us")
