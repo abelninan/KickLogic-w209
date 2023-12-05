@@ -767,15 +767,19 @@ def main4():
     st.write("## Data Sources")
     
     st.markdown("""The dataset utilized to create this interavtive web-app originated from [Kaggle](https://www.kaggle.com/datasets/aleespinosa/soccer-match-event-dataset)""")
-    
+
     st.write("## Meet The Creators")
 
     st.markdown("""
     1. **Abel Ninan** *(abelninan@berkeley.edu)*
     2. **Dan Nealon** *(dan.nealon@berkeley.edu)*
-    3. **Paul Cooper** *(email)*
-    4. **Brian Tung** *(email)*
+    3. **Paul Cooper** *(paul.cooper@berkeley.edu)*
+    4. **Brian Tung** *(brianhstung@berkeley.edu)*
     """)
+
+    st.write("## Need Some Help?")
+    
+    st.markdown("""You can find a video [here](https://www.youtube.com) that will walk you through our website and how to use it to its best ability!""")
 
 def main():
     st.set_page_config(page_title="KickLogic", page_icon=":soccer:", layout = "centered")
