@@ -509,164 +509,67 @@ def main2():
             col8.metric(label="Defending", value=role_stats_2.loc[role_stats_2['clean_position'] == position_choice, 'defending'].values[0])
             col9.metric(label="Physic", value=role_stats_2.loc[role_stats_2['clean_position'] == position_choice, 'physic'].values[0])
 
-def calc_action_weight(result_name, type_name):
 
-    action_weights = {
-        "success" : {"pass": 1, "shot": 5},
-        "fail" : {"pass": -1, "shot": 1}
-    }
-    try:
-      weight = action_weights[result_name][type_name]
-    except:
-      weight = 0
-    return weight
+def create_momentum_comparison_chart(game_momentum_df, team_ids = [674]):
 
-def calc_game_momentum(actions, game_id, perspective_team_id = 0, weight_span = 3):
+    these_teams_momentum = game_momentum_df[game_momentum_df['team_id'].isin(team_ids)]
 
-    game_data = actions[actions['game_id'] == game_id]
+    chart = alt.Chart(these_teams_momentum).mark_line().encode(
+        x=alt.X("time_minutes", title="Minute"),
+        y=alt.Y("weighted_avg_momentum:Q", title="Momentum", scale=alt.Scale(domain=[-.25, .25])),
+        color=alt.Color("name:N", title="Team")
+    ).configure_mark(opacity=0.75).interactive()
 
-    # Convert time from seconds to minutes for easier processing
-    game_data['time_minutes'] = game_data['time_seconds'] // 60 + 45 * (game_data['period_id'] -1)
-
-    # Define action weights
-    action_weights = {"pass": 1, "shot": 2}
-
-    # Filter for relevant actions
-    relevant_actions = game_data[game_data['type_name'].isin(action_weights.keys())]
-
-    # Avoid SettingWithCopyWarning by creating a new DataFrame instead of modifying a slice
-    relevant_actions_fixed = relevant_actions.copy()
-    relevant_actions_fixed['action_weight'] = relevant_actions_fixed.apply(lambda x: calc_action_weight(x.result_name, x.type_name), axis=1)
-
-    # Group the data by game, minute, and team to count weighted actions and calculate the average x-coordinate
-    weighted_grouped_data = relevant_actions_fixed.groupby(['game_id', 'time_minutes', 'team_id']).agg(
-        weighted_actions=pd.NamedAgg(column='action_weight', aggfunc='sum'),
-        avg_start_x=pd.NamedAgg(column='start_x', aggfunc='mean')
-    ).reset_index()
-
-    # # Calculate momentum
-    weighted_grouped_data['momentum'] = ((weighted_grouped_data['avg_start_x'] - 50) / 50) * weighted_grouped_data['weighted_actions']
-
-    # # Dynamically determine the teams based on the data
-    teams = weighted_grouped_data['team_id'].unique()
-    if len(teams) != 2:
-        print("Error: There are not exactly two teams in the game data.")
-        return None
-
-    if perspective_team_id == 0:
-        team_1_id, team_2_id = teams[0], teams[1]
-    else:
-        team_1_id = perspective_team_id
-        team_2_id = np.setdiff1d(weighted_grouped_data['team_id'].unique(), perspective_team_id)[0]
-
-    # weighted average by teamId
-    team1_df = weighted_grouped_data[weighted_grouped_data['team_id'] == team_1_id]
-    team2_df = weighted_grouped_data[weighted_grouped_data['team_id'] == team_2_id]
-    team1_df['weighted_avg_momentum'] = team1_df.iloc[:,5].ewm(span=weight_span).mean()
-    team2_df['weighted_avg_momentum'] = -1 * team2_df.iloc[:,5].ewm(span=weight_span).mean()
-    team2_df['momentum'] = -1 * team2_df['momentum']
-
-    # # Adjust momentum calculation considering the team identity.
-    weighted_grouped_data = pd.concat([team1_df, team2_df])
-
-    # # Create a DataFrame for momentum difference per minute
-    momentum_per_minute = weighted_grouped_data.groupby('time_minutes')[['momentum', 'weighted_avg_momentum']].sum().reset_index()
-
-    # # Normalize the momentum values to be between -1 and 1
-    max_momentum = momentum_per_minute['momentum'].abs().max()
-    momentum_per_minute['momentum'] = momentum_per_minute['momentum'].apply(lambda x: x / max_momentum)
-    momentum_per_minute['weighted_avg_momentum'] = momentum_per_minute['weighted_avg_momentum'].apply(lambda x: x / max_momentum)
-
-    return momentum_per_minute
-
-def create_momentum_chart(game_momentum_df):
-    game_momentum_df['pos_momentum'] = game_momentum_df['momentum'].apply(lambda x: max(x, 0))
-    game_momentum_df['neg_momentum'] = game_momentum_df['momentum'].apply(lambda x: min(x, 0))
-
-    posChart = alt.Chart(game_momentum_df).mark_area().encode(
-        x=alt.X("time_minutes", title="Game Time"),
-        y=alt.Y("pos_momentum", scale=alt.Scale(domain=[-0.5, 0.5]), title="Momentum")
-    )
-
-    negChart = alt.Chart(game_momentum_df).mark_area().encode(
-        x=alt.X("time_minutes", title="Game Time"),
-        y=alt.Y("neg_momentum", scale=alt.Scale(domain=[-0.5, 0.5]), title="Momentum"),
-        fill = alt.value("red")
-    )
-
-    game_momentum_df['pos_momentum_weighted'] = game_momentum_df['weighted_avg_momentum'].apply(lambda x: max(x, 0))
-    game_momentum_df['neg_momentum_weighted'] = game_momentum_df['weighted_avg_momentum'].apply(lambda x: min(x, 0))
-
-    posChart_w = alt.Chart(game_momentum_df).mark_area().encode(
-        x=alt.X("time_minutes", title="Game Time"),
-        y=alt.Y("pos_momentum_weighted", scale=alt.Scale(domain=[-0.5, 0.5]), title="Momentum")
-    )
-
-    negChart_w = alt.Chart(game_momentum_df).mark_area().encode(
-        x=alt.X("time_minutes", title="Game Time"),
-        y=alt.Y("neg_momentum_weighted", scale=alt.Scale(domain=[-0.5, 0.5]), title="Momentum"),
-        fill = alt.value("red")
-    )
-
-    return posChart_w + negChart_w
-
-def get_games_by_team_id(actions, teamId):
-  return actions[actions['team_id'] == teamId]['game_id'].unique()
-
-def calc_team_season_momentum(actions, teamId):
-    game_ids = get_games_by_team_id(actions, teamId)
-
-    game_momentums = calc_game_momentum(actions, game_ids[0], teamId, 3)
-    for g in game_ids[1:]:
-        this_game_momentum = calc_game_momentum(actions, g, teamId, 3)
-        game_momentums = pd.concat([game_momentums, this_game_momentum])
-
-    return game_momentums.groupby('time_minutes').agg(
-        momentum=pd.NamedAgg(column='momentum', aggfunc='mean'),
-        weighted_avg_momentum=pd.NamedAgg(column='weighted_avg_momentum', aggfunc='mean')
-    ).reset_index()
-
-# Set up a dataframe with precalculated metrics per team
-def pass_success_rate(teamId, actionsGrouped):
-    return actionsGrouped[(actionsGrouped["team_id"] == teamId) & (actionsGrouped["type_name"] == "pass") & (actionsGrouped["result_name"] == "success")]["count"].sum() / actionsGrouped[(actionsGrouped["team_id"] == teamId) & (actionsGrouped["type_name"] == "pass")]["count"].sum()
-
-def crosses_per_shot(teamId, actionsGrouped):
-      return actionsGrouped[(actionsGrouped["team_id"] == teamId) & (actionsGrouped["type_name"] == "cross")]["count"].sum() / actionsGrouped[(actionsGrouped["team_id"] == teamId) & (actionsGrouped["type_name"] == "shot")]["count"].sum()
-
-def passes_per_shot(teamId, actionsGrouped):
-      return actionsGrouped[(actionsGrouped["team_id"] == teamId) & (actionsGrouped["type_name"] == "pass")]["count"].sum() / actionsGrouped[(actionsGrouped["team_id"] == teamId) & (actionsGrouped["type_name"] == "shot")]["count"].sum()
-
-def set_team_metrics_df(actions, teams, team_metrics):
-
-    actions_grouped = actions.groupby(['team_id', 'type_name', 'result_name']).size().reset_index(name="count")
-
-    return pd.DataFrame(
-        [[
-            t,
-            pass_success_rate(t, actions_grouped),
-            crosses_per_shot(t, actions_grouped),
-            passes_per_shot(t, actions_grouped)
-        ] for t in actions_grouped["team_id"].unique()],
-        columns = ["team_id"] + team_metrics
-    ).join(teams, lsuffix="team_id", rsuffix="wyId")
+    return chart
 
 def make_team_comparison_bar_chart(team_metrics_df, metric, multi, height=200):
     base_bar = alt.Chart(team_metrics_df, title=metric).mark_bar().encode(
-      x=alt.X("name:N", title = "Club"),
+      x="name:N",
       color= "name:N",
       y= alt.Y(metric, axis=alt.Axis(title=None)),
     ).transform_filter(multi).properties(height=height)
     text= base_bar.mark_text(angle = 270, align="center", yOffset=50, fontWeight="bold").encode(text="name:N", color=alt.ColorValue("black"))
     return (base_bar + text)
 
-def create_team_comparison_charts(team_metrics_df, team_metrics):
+def create_team_comparison_charts(team_metrics_df, team_metrics, league = 'All'):
+    # Europe: center = [-20, 47], scale = 1400
+    # France: center = [-20, 47], scale = 3000)
+    # England: center = [-22, 52], scale = 4200)
+    # Germany: center = [-10, 52], scale = 3700)
+    # Spain: center = [-25, 40], scale = 3200)
+    # Italy: center = [-8, 42], scale = 3200)
+    if league == 'England':
+      subset_metrics_df = team_metrics_df[team_metrics_df['Country'] == 'England']
+      center = [-22, 52]
+      scale = 4200
+    elif league == 'France':
+      subset_metrics_df = team_metrics_df[team_metrics_df['Country'].isin(['France','Monaco'])]
+      center = [-20, 47]
+      scale = 3000
+    elif league == 'Germany':
+      subset_metrics_df = team_metrics_df[team_metrics_df['Country'] == 'Germany']
+      center = [-10, 52]
+      scale = 3700
+    elif league == 'Spain':
+      subset_metrics_df = team_metrics_df[team_metrics_df['Country'] == 'Spain']
+      center = [-25, 40]
+      scale = 3200
+    elif league == 'Italy':
+      subset_metrics_df = team_metrics_df[team_metrics_df['Country'] == 'Italy']
+      center = [-8, 42]
+      scale = 3200    
+    else:
+      subset_metrics_df = team_metrics_df
+      center = [-20, 47]
+      scale = 1400 
+    
     sphere = alt.sphere()
     graticule = alt.graticule(step=[10, 10])
     # lats = alt.sequence(start=-30, stop=71, step=10, as_='lats')
     # lons = alt.sequence(start=-90, stop=91, step=10, as_='lons')
 
-    width = 600
-    height = 450
+    width = 800
+    height = 600
 
     # Source of land data
     source = alt.topo_feature('https://cdn.jsdelivr.net/npm/vega-datasets@v1.29.0/data/world-110m.json', 'countries')
@@ -681,58 +584,53 @@ def create_team_comparison_charts(team_metrics_df, team_metrics):
     projections = {
         "Albers": {
             "type": "albers",
-            "center": [-10, 50],
-            "rotate": [-10, 5],
+            "center": center,
+            "rotate": [-20, 0],
             "translate": [width/2, height/2],
-            "scale": 1000,
+            "scale": scale,
             "precision": 0.1
         },
     }
     geo_chart = base.properties(projection=projections['Albers'])
 
     multi = alt.selection_multi(on='click', nearest=False, empty = 'none', bind='legend', toggle="true")
-    geo_points = alt.Chart(team_metrics_df).mark_circle().encode(
+    geo_points = alt.Chart(subset_metrics_df).mark_circle().encode(
         longitude='longitude:Q',
         latitude='latitude:Q',
-        size=alt.condition(multi, alt.value(60),alt.value(40)),
+        opacity=alt.condition(multi, alt.OpacityValue(1), alt.OpacityValue(0.8)),
+        size=alt.condition(multi, alt.value(120),alt.value(40)),
         shape=alt.condition(multi, alt.ShapeValue("diamond"), alt.ShapeValue("circle")),
         tooltip='officialName',
         color= alt.condition(multi, "name:N",alt.ColorValue('black'))
-        # color = alt.Color("name:N", legend=None) I can't figure out how to suppress the legend while keeping the condition?
     ).add_selection(
         multi
     )
 
     barChartProperties = {'height': 200}
 
-    barChart1 = make_team_comparison_bar_chart(team_metrics_df, team_metrics[0], multi)
-    barChart2 = make_team_comparison_bar_chart(team_metrics_df, team_metrics[1], multi)
-    barChart3 = make_team_comparison_bar_chart(team_metrics_df, team_metrics[2], multi, height=201)
+    barChart1 = make_team_comparison_bar_chart(subset_metrics_df, team_metrics[0], multi)
+    barChart2 = make_team_comparison_bar_chart(subset_metrics_df, team_metrics[1], multi)
+    barChart3 = make_team_comparison_bar_chart(subset_metrics_df, team_metrics[2], multi, height=201)
 
-    return (geo_chart + geo_points) & (barChart1 | barChart2 | barChart3)
+    return alt.vconcat((geo_chart + geo_points), (barChart1 | barChart2 | barChart3), center=True)
     
 def main3():
-    actions = load_data('actions_short.csv')
-    teams = load_data('teams_enriched.csv')
+    team_season_momentum = load_data('team_season_momentum.csv')
+    team_metrics_df = load_data('team_metrics1.csv')
+    
 
-    pd.options.mode.chained_assignment = None
-
-    # Sidebar - Team selection
-    st.sidebar.header('Team Selection')
-    unique_teams = actions['team_id'].unique()
-    sorted_unique_teams = teams[teams['wyId'].isin(unique_teams)].sort_values(by=['name'])
-    selected_team = st.sidebar.selectbox('Choose a team', sorted_unique_teams['wyId'], format_func=lambda x: teams[teams['wyId']==x]['name'].iloc[0])
-
-    st.header('Club Momentum')
-    st.write('Chart of the average momentum of your selected club over the full 2018 season')
-    st.altair_chart(create_momentum_chart(calc_team_season_momentum(actions, selected_team)), use_container_width=True)
+    st.header('Team Momentum')
+    st.caption('Momentum estimates how well a team is doing at any point in the game')
+    selected_teams = st.multiselect('Choose Teams', team_metrics_df["team_id"], max_selections = 5, format_func=lambda x: team_metrics_df[team_metrics_df['team_id']==x]['name'].values[0])
+    
+    st.altair_chart(create_momentum_comparison_chart(team_season_momentum, selected_teams), use_container_width=True)
 
     st.header('Team Comparisons')
-    st.write('Select multiple clubs from the map to compare various metrics')
+    selectedLeague = st.selectbox("League", ['All', 'England', 'France', 'Germany', 'Italy', 'Spain'])
     team_metrics = ["Pass Success Rate", "Crosses / Shot", "Passes / Shot"]
-    team_metrics_df = set_team_metrics_df(actions, teams, team_metrics)
+
+    st.altair_chart(create_team_comparison_charts(team_metrics_df, team_metrics, selectedLeague), use_container_width=True)
     
-    st.altair_chart(create_team_comparison_charts(team_metrics_df, team_metrics), use_container_width=True)
 
 def main5():
     st.write("## Brian's Page")
