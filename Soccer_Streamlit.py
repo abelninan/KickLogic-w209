@@ -158,24 +158,39 @@ def create_passing_map(game_data, selected_team):
         height=400  # Keeping the aspect ratio of the field in mind
     )
 
-    # Adding arrows to the end of each line
-    # Arrow chart for indicating direction
-    arrow_chart = alt.Chart(pass_actions).mark_point(
-        shape='arrow', 
-        filled=True,
-        size=100  # Adjust size as needed
-    ).encode(
-        x='end_x:Q',
-        y='end_y:Q',
-        angle=alt.Angle('angle', scale=alt.Scale(domain=[0, 360])),
-        color=alt.condition(
-            alt.datum.pass_outcome == 'success',
-            alt.value('green'),  # The pass was successful
-            alt.value('red')     # The pass was not successful
-        ),
-        tooltip=['start_x', 'start_y', 'end_x', 'end_y', 'angle', 'pass_outcome']  # Adding start_x and start_y to tooltip
-    )
+    # # Adding arrows to the end of each line
+    # # Arrow chart for indicating direction
+    # arrow_chart = alt.Chart(pass_actions).mark_point(
+    #     shape='arrow', 
+    #     filled=True,
+    #     size=100  # Adjust size as needed
+    # ).encode(
+    #     x='end_x:Q',
+    #     y='end_y:Q',
+    #     angle=alt.Angle('angle', scale=alt.Scale(domain=[0, 360])),
+    #     color=alt.condition(
+    #         alt.datum.pass_outcome == 'success',
+    #         alt.value('green'),  # The pass was successful
+    #         alt.value('red')     # The pass was not successful
+    #     ),
+    #     tooltip=['start_x', 'start_y', 'end_x', 'end_y', 'angle', 'pass_outcome']  # Adding start_x and start_y to tooltip
+    # )
 
+    arrow_chart = alt.Chart(pass_actions).mark_point(
+    shape='arrow',
+    filled=True,
+    size=100,  # Adjust size as needed
+).encode(
+    x='end_x:Q',
+    y='end_y:Q',
+    theta='angle:Q',
+    color=alt.condition(
+        alt.datum.pass_outcome == 'success',
+        alt.value('green'),  # The pass was successful
+        alt.value('red')     # The pass was not successful
+    ),
+    tooltip=['start_x', 'start_y', 'end_x', 'end_y', 'angle', 'pass_outcome']  # Adding start_x and start_y to tooltip
+)
     # Combine the line chart and the arrow chart
     combined_chart = pass_chart + arrow_chart
     combined_chart = combined_chart.properties(
