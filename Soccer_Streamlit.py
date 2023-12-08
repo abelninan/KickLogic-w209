@@ -117,11 +117,15 @@ def main1():
 
 # Function to create a passing map
 def calculate_angle(row):
-    # Calculate the angle of the line for arrow orientation
-    dx = row['end_x'] - row['start_x']
-    dy = row['end_y'] - row['start_y']
-    angle = np.degrees(np.arctan2(dy, dx))
+    start_x, start_y = row['start_x'], row['start_y']
+    end_x, end_y = row['end_x'], row['end_y']
 
+    # Calculate the angle
+    angle = math.degrees(math.atan2(end_y - start_y, end_x - start_x))
+
+    # Ensure the angle is between 0 and 360 degrees
+    angle = (angle + 360) % 360
+    
     return angle
 
 # Function to create a passing map
