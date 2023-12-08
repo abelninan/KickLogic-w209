@@ -719,7 +719,7 @@ def main3():
         selectedLeague = st.selectbox("League", ['All', 'England', 'France', 'Germany', 'Italy', 'Spain'])
         team_metrics = ["Pass Success Rate", "Crosses / Shot", "Passes / Shot"]
 
-    st.altair_chart(create_team_comparison_charts(team_metrics_df, team_metrics, selectedLeague), use_container_width=True)
+        st.altair_chart(create_team_comparison_charts(team_metrics_df, team_metrics, selectedLeague), use_container_width=True)
     
 
 def main5():
