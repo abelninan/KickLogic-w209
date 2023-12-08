@@ -137,7 +137,7 @@ def create_passing_map(game_data, selected_team):
     # Determine if the pass was successful
     pass_actions['pass_outcome'] = pass_actions['result_name'].apply(lambda x: 'success' if x == 'success' else 'fail')
     pass_actions['angle'] = pass_actions.apply(calculate_angle, axis=1)
-
+    st.write(pass_actions.head(50))
     # Define field dimensions; you might adjust these based on the coordinate system in your data
     # Store as variables we can easily reuse for the plots
     field_length_min =  0.0
