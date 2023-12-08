@@ -396,10 +396,10 @@ def display_game_statistics(game_data):
      
     # Create labels using mark_text
     labels = base.mark_text(
-        align='left',
+        align='center',
         baseline='middle',
-        dx=5,  # Adjust this value to control the label position
-        dy=-3,  # Adjust this value to control the label position
+        dx=0,  # Adjust this value to control the label position
+        dy=0,  # Adjust this value to control the label position
     ).encode(
         text='Count:Q',
         color=alt.value('white')  # Set the text color to white
