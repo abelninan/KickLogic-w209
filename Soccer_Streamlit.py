@@ -301,8 +301,9 @@ def create_momentum_chart(game_momentum_df):
 
     posChart_w = alt.Chart(game_momentum_df).mark_area().encode(
         x="time_minutes",
-        y=alt.Y("pos_momentum_weighted", title = "Momentum", scale=alt.Scale(domain=[-1, 1]))
+        y=alt.Y("pos_momentum_weighted", title = "Momentum", scale=alt.Scale(domain=[-1, 1])),
         #tooltip=["time_minutes", "pos_momentum_weighted", "team"]  # Added team to tooltip
+        fill=alt.ColorValue('#1f77b4')
 
     )
 
@@ -310,7 +311,7 @@ def create_momentum_chart(game_momentum_df):
         x="time_minutes",
         y=alt.Y("neg_momentum_weighted", title = "Momentum", scale=alt.Scale(domain=[-1, 1])),
         #tooltip=["time_minutes", "neg_momentum_weighted", "team"],
-        fill = alt.value("red")
+        fill = alt.ColorValue('#aec7e8')
     )
 
     # Calculate the midpoint of the time range
