@@ -391,12 +391,24 @@ def display_game_statistics(game_data):
     
     # Create the bar chart with labels
     bars = base.mark_bar().encode(
-        tooltip=['type_name:N', 'Team:N', 'Percentage:Q'],
-        text=alt.Text('Count:Q', format=',')  # Add label text to the bars
+        tooltip=['type_name:N', 'Team:N', 'Percentage:Q']
+    )
+     
+    # Create labels using mark_text
+    labels = base.mark_text(
+        align='left',
+        baseline='middle',
+        dx=3,  # Adjust this value to control the label position
+        dy=-5,  # Adjust this value to control the label position
+    ).encode(
+        text='Count:Q'
     )
     
     # Layer the bar chart with text
-    chart = bars.properties(width=600, height=200)
+    chart = (bars + labels).properties(width=600, height=200)
+    
+    # Layer the bar chart with text
+    #chart = bars.properties(width=600, height=200)
     st.altair_chart(bars.properties(width=600, height=200))
 
     # Display the chart
