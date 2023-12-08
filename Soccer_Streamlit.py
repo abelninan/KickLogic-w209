@@ -398,8 +398,9 @@ def display_game_statistics(game_data):
     labels = base.mark_text(
         align='left',
         baseline='middle',
-        dx=3,  # Adjust this value to control the label position
+        dx=5,  # Adjust this value to control the label position
         dy=-5,  # Adjust this value to control the label position
+        color='white'  # Set the text color to white
     ).encode(
         text='Count:Q'
     )
@@ -409,7 +410,7 @@ def display_game_statistics(game_data):
     
     # Layer the bar chart with text
     #chart = bars.properties(width=600, height=200)
-    st.altair_chart(bars.properties(width=600, height=200))
+    #st.altair_chart(bars.properties(width=600, height=200))
 
     # Display the chart
     chart
