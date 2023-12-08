@@ -398,7 +398,8 @@ def display_game_statistics(game_data):
     labels = base.mark_text(
         align=alt.condition(alt.datum['Team'] == team_names[0], alt.value('right'), alt.value('left')),
         baseline='middle',  # Center the text vertically within the bars
-        dx=alt.condition(alt.datum['Team'] == team_names[0], alt.value(5), alt.value(-5)),
+        #dx=alt.condition(alt.datum['Team'] == team_names[0], alt.value(5), alt.value(-5)),
+        dx = 0,
         dy=0  # No vertical displacement
     ).encode(
         text=alt.Text('Count:Q', format=','),
