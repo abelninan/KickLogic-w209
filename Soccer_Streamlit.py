@@ -227,7 +227,7 @@ def create_shot_map(game_data, selected_team):
     size=alt.Size('result_name:N', 
                   scale=alt.Scale(range=[minimum_point_size, 2 * minimum_point_size]), 
                   legend=None),
-    tooltip=['player_name', 'time_minute', 'start_x', 'start_y',  'result_name']
+    tooltip=['player_name', 'time_minutes', 'start_x', 'start_y',  'result_name']
     ).properties(
         width=700,
         height=400
