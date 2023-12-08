@@ -188,7 +188,7 @@ def create_passing_map(game_data, selected_team):
 ).encode(
     x='end_x:Q',
     y='end_y:Q',
-    theta=alt.Field('angle', title='Direction'),  # Specify the direction using the angle
+    theta=alt.Theta('angle', title='Direction'),  # Specify the direction using the angle
     color=alt.condition(
         alt.datum.pass_outcome == 'success',
         alt.value('green'),  # The pass was successful
