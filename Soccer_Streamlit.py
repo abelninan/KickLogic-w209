@@ -396,7 +396,8 @@ def display_game_statistics(game_data):
      
     # Create labels using mark_text
     labels = base.mark_text(
-        align=alt.condition(alt.datum['Team'] == team_names[0], alt.value('right'), alt.value('left')),
+        #align=alt.condition(alt.datum['Team'] == team_names[0], alt.value('right'), alt.value('left')),
+        align = 'center',
         baseline='middle',  # Center the text vertically within the bars
         #dx=alt.condition(alt.datum['Team'] == team_names[0], alt.value(5), alt.value(-5)),
         dx = 0,
