@@ -80,9 +80,11 @@ def main1():
         
         # Add an option to select all players
         sorted_players = np.insert(sorted_players, 0, 'All Players')
+        players_display = [name.encode('utf-8').decode('unicode_escape') for name in players_sorted]
+
                 
         # Allow user to select a player from the team
-        selected_player = st.selectbox('Select a player (optional)', sorted_players)
+        selected_player = st.selectbox('Select a player (optional)', players_display)
     
         # Filter data based on selected player if a specific player is chosen
         if selected_player != 'All Players':
