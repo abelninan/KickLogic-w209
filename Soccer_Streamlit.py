@@ -399,7 +399,7 @@ def display_game_statistics(game_data):
         align=alt.condition(alt.datum['Team'] == team_names[0], alt.value('right'), alt.value('left')),
         baseline='middle',  # Center the text vertically within the bars
         dx=alt.condition(alt.datum['Team'] == team_names[0], alt.value(5), alt.value(-5)),
-        dy=0,  # No vertical displacement
+        dy=0  # No vertical displacement
     ).encode(
         text=alt.Text('Count:Q', format=','),
         color=alt.value('white'),  # Set the text content color to white
