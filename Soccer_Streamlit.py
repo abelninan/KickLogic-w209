@@ -412,7 +412,6 @@ def display_game_statistics(game_data):
     labels_team1 = base.transform_filter(alt.datum['Team'] == teams[0]).mark_text(
         align='left',
         baseline='middle',
-        dx=5,
     ).encode(
         text=alt.Text('Count:Q', format=','),
         color=alt.value('white'),
@@ -422,7 +421,6 @@ def display_game_statistics(game_data):
     labels_team2 = base.transform_filter(alt.datum['Team'] == teams[1]).mark_text(
         align='right',
         baseline='middle',
-        dx=-5,
     ).encode(
         text=alt.Text('Count:Q', format=','),
         color=alt.value('white'),
