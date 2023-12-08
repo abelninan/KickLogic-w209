@@ -326,7 +326,7 @@ def create_momentum_chart(game_momentum_df):
     textChart_team1 = alt.Chart(pd.DataFrame({'time_minutes': [midpoint], 'pos': [0.8]})).mark_text(
         align='center', baseline='middle'
     ).encode(
-        x='time_minutes:Q',
+        x=alt.X('time_minutes:Q', axis=alt.Axis(title="Game Time (Minutes)")),
         y='pos:Q',
         text=alt.value(team1_name)  # Using the actual name of Team 1
     )
@@ -335,7 +335,7 @@ def create_momentum_chart(game_momentum_df):
     textChart_team2 = alt.Chart(pd.DataFrame({'time_minutes': [midpoint], 'neg': [-0.8]})).mark_text(
         align='center', baseline='middle'
     ).encode(
-        x='time_minutes:Q',
+        x=alt.X('time_minutes:Q', axis=alt.Axis(title="Game Time (Minutes)")),
         y='neg:Q',
         text=alt.value(team2_name)  # Using the actual name of Team 2
     )
