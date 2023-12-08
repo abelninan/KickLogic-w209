@@ -385,7 +385,7 @@ def display_game_statistics(game_data):
     base = alt.Chart(df_melted).encode(
         y=alt.Y('type_name:N', axis=alt.Axis(title='', labels=True), sort=df_melted['type_name'].unique().tolist()),
         x=alt.X('sum(Percentage):Q', axis=alt.Axis(title='Percentage'), scale=alt.Scale(domain=[0, 100])),
-        color=alt.Color('Team:N', legend=alt.Legend(title="Team")),
+        color=alt.Color('Team:N', legend=alt.Legend(title="Team", orient = 'top')),
         order=alt.Order('Team:N', sort='ascending')
     )
     
