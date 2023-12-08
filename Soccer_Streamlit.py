@@ -597,7 +597,7 @@ def create_momentum_comparison_chart(game_momentum_df, team_ids = [674]):
     chart = alt.Chart(these_teams_momentum).mark_line().encode(
         x=alt.X("time_minutes", title="Minute"),
         y=alt.Y("weighted_avg_momentum:Q", title="Momentum", scale=alt.Scale(domain=[-.25, .25])),
-        color=alt.Color("name:N", title="Team")
+        color=alt.Color("name:N", title="Club")
     ).configure_mark(opacity=0.75).interactive()
 
     return chart
@@ -680,7 +680,7 @@ def create_team_comparison_charts(team_metrics_df, team_metrics, league = 'All')
         opacity=alt.condition(multi, alt.OpacityValue(1), alt.OpacityValue(0.8)),
         size=alt.condition(multi, alt.value(120),alt.value(40)),
         shape=alt.condition(multi, alt.ShapeValue("diamond"), alt.ShapeValue("circle")),
-        tooltip='officialName',
+        tooltip='name',
         color= alt.condition(multi, "name:N",alt.ColorValue('black'))
     ).add_selection(
         multi
@@ -699,8 +699,8 @@ def main3():
     team_metrics_df = load_data('team_metrics1.csv')
     
 
-    st.header('Team Momentum')
-    st.caption('Momentum estimates how well a team is doing at any point in the game')
+    st.header('Club Average Momentum')
+    st.caption('Momentum estimates how well a club is doing at any point in the game. This chart has been averaged across the full season to identify trends in performance.')
     selected_teams = st.multiselect('Choose Teams', team_metrics_df["team_id"], max_selections = 5, format_func=lambda x: team_metrics_df[team_metrics_df['team_id']==x]['name'].values[0])
     
     st.altair_chart(create_momentum_comparison_chart(team_season_momentum, selected_teams), use_container_width=True)
