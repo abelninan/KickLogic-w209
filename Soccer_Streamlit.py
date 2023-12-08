@@ -409,7 +409,7 @@ def display_game_statistics(game_data):
         align=alt.condition(alt.datum['Team'] == team_names[0], alt.value('left'), alt.value('right')),
         dx=alt.condition(alt.datum['Team'] == team_names[0], alt.value(-5), alt.value(5))
 )
-    )
+    
 
     
     # Layer the bar chart with text
