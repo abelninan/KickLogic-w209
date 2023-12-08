@@ -121,13 +121,13 @@ def calculate_angle(row):
     start_x, start_y = row['start_x'], row['start_y']
     end_x, end_y = row['end_x'], row['end_y']
 
-    # Calculate the angle
-    angle = math.degrees(math.atan2(end_y - start_y, end_x - start_x))
+    # Calculate the angle in radians
+    angle_rad = math.atan2(end_y - start_y, end_x - start_x)
 
-    # Ensure the angle is between 0 and 360 degrees
-    angle = (angle + 360) % 360
+    # Ensure the angle is between 0 and 2*pi
+    angle_rad = (angle_rad + 2 * math.pi) % (2 * math.pi)
     
-    return angle
+    return angle_rad
 
 # Function to create a passing map
 def create_passing_map(game_data, selected_team):
