@@ -399,7 +399,7 @@ def display_game_statistics(game_data):
         align='left',
         baseline='middle',
         dx=5,  # Adjust this value to control the label position
-        dy=-5,  # Adjust this value to control the label position
+        dy=-7,  # Adjust this value to control the label position
         color='white'  # Set the text color to white
     ).encode(
         text='Count:Q'
