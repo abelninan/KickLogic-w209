@@ -80,7 +80,7 @@ def main1():
         
         # Add an option to select all players
         sorted_players = np.insert(sorted_players, 0, 'All Players')
-        players_display = [name.encode('utf-8').decode('unicode_escape') for name in players_sorted]
+        players_display = [name.encode('utf-8').decode('unicode_escape') for name in sorted_players]
 
                 
         # Allow user to select a player from the team
