@@ -422,11 +422,11 @@ def display_game_statistics(game_data):
     labels_team2 = base.transform_filter(alt.datum['Team'] == teams[1]).mark_text(
         align='right',
         baseline='middle',
-        dx=-5,
+        dx=5,
     ).encode(
         text=alt.Text('Count:Q', format=','),
         color=alt.value('white'),
-        x=alt.value(400),  # Set x to 100 for Team 2
+        x=alt.value(100),  # Set x to 100 for Team 2
     )
     
     # Layer the bar chart with text
