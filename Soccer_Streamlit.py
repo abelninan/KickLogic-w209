@@ -406,8 +406,8 @@ def display_game_statistics(game_data):
         color=alt.value('white'),  # Set the text content color to white
         x='sum(Percentage):Q',  # Position the text at the starting point of the bars
 )
-    df_team1 = df_melted[df_melted['Team'] == team_names[0]]
-    df_team2 = df_melted[df_melted['Team'] == team_names[1]]
+    df_team1 = df_melted[df_melted['Team'] == teams[0]]
+    df_team2 = df_melted[df_melted['Team'] == teams[1]]
 
     # Create labels for each team
     labels_team1 = df_team1.mark_text(
