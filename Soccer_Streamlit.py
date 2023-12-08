@@ -430,7 +430,7 @@ def display_game_statistics(game_data):
     )
     
     # Layer the bar chart with text
-    chart = (bars + labels_team1 + labels_team2).properties(width=400, height=500)
+    chart = (bars + labels_team1 + labels_team2).properties(width=400, height=350)
 
     
 
