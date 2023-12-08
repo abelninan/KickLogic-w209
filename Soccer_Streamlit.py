@@ -70,19 +70,19 @@ def main1():
         selected_team_data = game_data[game_data['team_name'] == selected_team]
         selected_team_id = selected_team_data.iloc[0]['team_id']
         # Get list of players from the selected team
-        players = selected_team_data['player_name'].unique()
+        players = selected_team_data['player_name'].dropna().unique()
 
-        # # Extract last names from player names
-        # last_names = [name.split('. ')[-1] for name in players]
+        # Extract last names from player names
+        last_names = [name.split('. ')[-1] for name in players]
         
-        # # Sort players based on last names
-        # sorted_players = [name for _, name in sorted(zip(last_names, players))]
+        # Sort players based on last names
+        sorted_players = [name for _, name in sorted(zip(last_names, players))]
         
-        # # Add an option to select all players
-        # sorted_players = np.insert(sorted_players, 0, 'All Players')
+        # Add an option to select all players
+        sorted_players = np.insert(sorted_players, 0, 'All Players')
                 
         # Allow user to select a player from the team
-        selected_player = st.selectbox('Select a player (optional)', players)
+        selected_player = st.selectbox('Select a player (optional)', sorted_players)
     
         # Filter data based on selected player if a specific player is chosen
         if selected_player != 'All Players':
