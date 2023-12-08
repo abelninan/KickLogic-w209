@@ -643,6 +643,13 @@ def create_team_comparison_charts(team_metrics_df, team_metrics, league = 'All')
       center = [-20, 47]
       scale = 1400 
     
+    if league == 'All':
+        unselected_size= 40
+        selected_size= 120
+    else:
+        unselected_size= 80
+        selected_size= 210
+    
     sphere = alt.sphere()
     graticule = alt.graticule(step=[10, 10])
     # lats = alt.sequence(start=-30, stop=71, step=10, as_='lats')
@@ -678,7 +685,7 @@ def create_team_comparison_charts(team_metrics_df, team_metrics, league = 'All')
         longitude='longitude:Q',
         latitude='latitude:Q',
         opacity=alt.condition(multi, alt.OpacityValue(1), alt.OpacityValue(0.8)),
-        size=alt.condition(multi, alt.value(120),alt.value(40)),
+        size=alt.condition(multi, alt.value(selected_size),alt.value(unselected_size)),
         shape=alt.condition(multi, alt.ShapeValue("diamond"), alt.ShapeValue("circle")),
         tooltip='name',
         color= alt.condition(multi, "name:N",alt.ColorValue('black'))
@@ -698,16 +705,19 @@ def main3():
     team_season_momentum = load_data('team_season_momentum.csv')
     team_metrics_df = load_data('team_metrics1.csv')
     
-
-    st.header('Club Average Momentum')
-    st.caption('Momentum estimates how well a club is doing at any point in the game. This chart has been averaged across the full season to identify trends in performance.')
-    selected_teams = st.multiselect('Choose Teams', team_metrics_df["team_id"], max_selections = 5, format_func=lambda x: team_metrics_df[team_metrics_df['team_id']==x]['name'].values[0])
+    tab1, tab2 = st.tabs(["Momentum", "Metrics"])
     
-    st.altair_chart(create_momentum_comparison_chart(team_season_momentum, selected_teams), use_container_width=True)
-
-    st.header('Team Comparisons')
-    selectedLeague = st.selectbox("League", ['All', 'England', 'France', 'Germany', 'Italy', 'Spain'])
-    team_metrics = ["Pass Success Rate", "Crosses / Shot", "Passes / Shot"]
+    with tab1:
+        st.header('Club Average Momentum')
+        st.caption('Momentum estimates how well a club is doing at any point in the game. This chart has been averaged across the full season to identify trends in performance.')
+        selected_teams = st.multiselect('Choose Teams', team_metrics_df["team_id"], max_selections = 5, format_func=lambda x: team_metrics_df[team_metrics_df['team_id']==x]['name'].values[0])
+    
+        st.altair_chart(create_momentum_comparison_chart(team_season_momentum, selected_teams), use_container_width=True)
+    
+    with tab2:
+        st.header('Club Metric Comparisons')
+        selectedLeague = st.selectbox("League", ['All', 'England', 'France', 'Germany', 'Italy', 'Spain'])
+        team_metrics = ["Pass Success Rate", "Crosses / Shot", "Passes / Shot"]
 
     st.altair_chart(create_team_comparison_charts(team_metrics_df, team_metrics, selectedLeague), use_container_width=True)
     
