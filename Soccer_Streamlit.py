@@ -396,15 +396,16 @@ def display_game_statistics(game_data):
      
     # Create labels using mark_text
     labels = base.mark_text(
-        align='right',
-        baseline='middle',
-        dx=0,  # Adjust this value to control the label position
-        dy=0,  # Adjust this value to control the label position
+        align=alt.condition(alt.datum['Team'] == team_names[0], alt.value('right'), alt.value('left')),
+        baseline='middle',  # Center the text vertically within the bars
+        dx=alt.condition(alt.datum['Team'] == team_names[0], alt.value(5), alt.value(-5)),
+        dy=0,  # No vertical displacement
     ).encode(
-        text='Count:Q',
-        color=alt.value('white'),  # Set the text color to white
-        x='sum(Percentage):Q'
+        text=alt.Text('Count:Q', format=','),
+        color=alt.value('white'),  # Set the text content color to white
+        x='sum(Percentage):Q'  # Position the text at the starting point of the bars
     )
+
     
     # Layer the bar chart with text
     chart = (bars + labels).properties(width=600, height=200)
