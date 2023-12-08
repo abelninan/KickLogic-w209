@@ -397,7 +397,8 @@ def display_game_statistics(game_data):
     
     # Layer the bar chart with text
     chart = bars.properties(width=600, height=200)
-    
+    st.altair_chart(bars.properties(width=600, height=200))
+
     # Display the chart
     chart
     
