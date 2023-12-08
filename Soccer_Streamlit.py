@@ -126,8 +126,11 @@ def calculate_angle(row):
 
     # Ensure the angle is between 0 and 2*pi
     angle_rad = (angle_rad + 2 * math.pi) % (2 * math.pi)
+
+    # Convert the angle to degrees
+    angle_deg = math.degrees(angle_rad)
     
-    return angle_rad
+    return angle_deg
 
 # Function to create a passing map
 def create_passing_map(game_data, selected_team):
