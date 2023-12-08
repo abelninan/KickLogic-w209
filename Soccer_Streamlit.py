@@ -406,27 +406,9 @@ def display_game_statistics(game_data):
         color=alt.value('white'),  # Set the text content color to white
         x='sum(Percentage):Q',  # Position the text at the starting point of the bars
 )
-    
 
-    # Layer the bar chart with text
-    chart = (bars + labels).properties(width=600, height=200)
-    
-    # Separate bars and labels for each team
-    bars_team1 = base.mark_bar().encode(
-        x=alt.X('sum(Percentage):Q', axis=alt.Axis(title='Percentage'), scale=alt.Scale(domain=[0, 100])),
-        y=alt.Y('type_name:N', axis=alt.Axis(title='', labels=True), sort=df_melted['type_name'].unique().tolist()),
-        color=alt.value('blue'),
-        order=alt.Order('Team:N', sort='ascending')
-    ).transform_filter(alt.datum['Team'] == team_names[0])
-    
-    bars_team2 = base.mark_bar().encode(
-        x=alt.X('sum(Percentage):Q', axis=alt.Axis(title='Percentage'), scale=alt.Scale(domain=[0, 100])),
-        y=alt.Y('type_name:N', axis=alt.Axis(title='', labels=True), sort=df_melted['type_name'].unique().tolist()),
-        color=alt.value('red'),
-        order=alt.Order('Team:N', sort='ascending')
-    ).transform_filter(alt.datum['Team'] == team_names[1])
-    
-    labels_team1 = bars_team1.mark_text(
+    # Create labels for each team
+    labels_team1 = df_team1.mark_text(
         align='right',
         baseline='middle',
         dx=-5,
@@ -435,7 +417,7 @@ def display_game_statistics(game_data):
         color=alt.value('white'),
     )
     
-    labels_team2 = bars_team2.mark_text(
+    labels_team2 = df_team2.mark_text(
         align='left',
         baseline='middle',
         dx=5,
@@ -444,8 +426,15 @@ def display_game_statistics(game_data):
         color=alt.value('white'),
     )
     
-    # Layer the bar charts with text
-    chart2 = (bars_team1 + labels_team1 + bars_team2 + labels_team2).properties(width=600, height=200)
+    # Layer the bar chart with text
+    chart = (bars + labels_team1 + labels_team2).properties(width=600, height=200)
+
+    
+
+    # Layer the bar chart with text
+    #chart = (bars + labels).properties(width=600, height=200)
+    
+    
 
     
     
@@ -454,7 +443,7 @@ def display_game_statistics(game_data):
     #st.altair_chart(bars.properties(width=600, height=200))
 
     # Display the chart
-    chart2
+    chart
     
 
 def main2():
