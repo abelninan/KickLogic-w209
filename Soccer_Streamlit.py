@@ -389,16 +389,17 @@ def display_game_statistics(game_data):
         order=alt.Order('Team:N', sort='ascending')
     )
     
-    # Create the bar chart
+    # Create the bar chart with labels
     bars = base.mark_bar().encode(
-        tooltip=['type_name:N', 'Team:N', 'Percentage:Q']
+        tooltip=['type_name:N', 'Team:N', 'Percentage:Q'],
+        text=alt.Text('Count:Q', format=',')  # Add label text to the bars
     )
     
-    # Layer the bar chart without text
+    # Layer the bar chart with text
     chart = bars.properties(width=600, height=200)
     
     # Display the chart
-    chart    
+    chart
     
 
 def main2():
