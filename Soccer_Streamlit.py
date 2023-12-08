@@ -397,30 +397,64 @@ def display_game_statistics(game_data):
     # Create labels using mark_text
     labels = base.mark_text(
         #align=alt.condition(alt.datum['Team'] == team_names[0], alt.value('right'), alt.value('left')),
-        #align = 'center',
+        align = 'center',
         baseline='middle',  # Center the text vertically within the bars
-        #dx=alt.condition(alt.datum['Team'] == team_names[0], alt.value(5), alt.value(-5)),
-        #dx = 0,
+        dx = 0,
         dy=0  # No vertical displacement
     ).encode(
         text=alt.Text('Count:Q', format=','),
         color=alt.value('white'),  # Set the text content color to white
         x='sum(Percentage):Q',  # Position the text at the starting point of the bars
-        align=alt.condition(alt.datum['Team'] == team_names[0], alt.value('left'), alt.value('right')),
-        dx=alt.condition(alt.datum['Team'] == team_names[0], alt.value(-5), alt.value(5))
 )
     
 
-    
     # Layer the bar chart with text
     chart = (bars + labels).properties(width=600, height=200)
+    
+    # Separate bars and labels for each team
+    bars_team1 = base.mark_bar().encode(
+        x=alt.X('sum(Percentage):Q', axis=alt.Axis(title='Percentage'), scale=alt.Scale(domain=[0, 100])),
+        y=alt.Y('type_name:N', axis=alt.Axis(title='', labels=True), sort=df_melted['type_name'].unique().tolist()),
+        color=alt.value('blue'),
+        order=alt.Order('Team:N', sort='ascending')
+    ).transform_filter(alt.datum['Team'] == team_names[0])
+    
+    bars_team2 = base.mark_bar().encode(
+        x=alt.X('sum(Percentage):Q', axis=alt.Axis(title='Percentage'), scale=alt.Scale(domain=[0, 100])),
+        y=alt.Y('type_name:N', axis=alt.Axis(title='', labels=True), sort=df_melted['type_name'].unique().tolist()),
+        color=alt.value('red'),
+        order=alt.Order('Team:N', sort='ascending')
+    ).transform_filter(alt.datum['Team'] == team_names[1])
+    
+    labels_team1 = bars_team1.mark_text(
+        align='right',
+        baseline='middle',
+        dx=-5,
+    ).encode(
+        text=alt.Text('Count:Q', format=','),
+        color=alt.value('white'),
+    )
+    
+    labels_team2 = bars_team2.mark_text(
+        align='left',
+        baseline='middle',
+        dx=5,
+    ).encode(
+        text=alt.Text('Count:Q', format=','),
+        color=alt.value('white'),
+    )
+    
+    # Layer the bar charts with text
+    chart2 = (bars_team1 + labels_team1 + bars_team2 + labels_team2).properties(width=600, height=200)
+
+    
     
     # Layer the bar chart with text
     #chart = bars.properties(width=600, height=200)
     #st.altair_chart(bars.properties(width=600, height=200))
 
     # Display the chart
-    chart
+    chart2
     
 
 def main2():
