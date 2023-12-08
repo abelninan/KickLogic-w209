@@ -403,7 +403,7 @@ def display_game_statistics(game_data):
     ).encode(
         text='Count:Q',
         color=alt.value('white'),  # Set the text color to white
-        x='sum(Percentage):Q
+        x='sum(Percentage):Q'
     )
     
     # Layer the bar chart with text
