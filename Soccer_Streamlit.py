@@ -301,15 +301,15 @@ def create_momentum_chart(game_momentum_df):
 
     posChart_w = alt.Chart(game_momentum_df).mark_area().encode(
         x="time_minutes",
-        y=alt.Y("pos_momentum_weighted", title = "Momentum", scale=alt.Scale(domain=[-1, 1])),
-        tooltip=["time_minutes", "pos_momentum_weighted", "team"]  # Added team to tooltip
+        y=alt.Y("pos_momentum_weighted", title = "Momentum", scale=alt.Scale(domain=[-1, 1]))
+        #tooltip=["time_minutes", "pos_momentum_weighted", "team"]  # Added team to tooltip
 
     )
 
     negChart_w = alt.Chart(game_momentum_df).mark_area().encode(
         x="time_minutes",
         y=alt.Y("neg_momentum_weighted", title = "Momentum", scale=alt.Scale(domain=[-1, 1])),
-        tooltip=["time_minutes", "neg_momentum_weighted", "team"],
+        #tooltip=["time_minutes", "neg_momentum_weighted", "team"],
         fill = alt.value("red")
     )
 
