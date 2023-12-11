@@ -186,7 +186,7 @@ def create_passing_map(game_data, selected_team):
     # )
 
     arrow_chart = alt.Chart(pass_actions).mark_point(
-    shape='arrow',
+    shape='circle',
     filled=True,
     size=100,  # Adjust size as needed
 ).encode(
