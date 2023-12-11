@@ -23,7 +23,7 @@ def main1():
 
     st.write('\n')
 
-    st.write("In a 90 minute soccer match, thousands of 'actions' occur. These include things like passes, shots, fouls, saves, dribbles, among others. For each of these, there are successful and unsuccessful outcomes. A successful shot could be a goal while a failed pass would be a turnover. We would hypothesize that certain things like position on field and distance of the attempt (long vs short pass) would have different success rates. Like an sport, there are also eb and flows of a competition, we wanted to create a view to get a high level understanding of what occured in the match.")
+    st.write("In a 90 minute soccer match, thousands of 'actions' occur. These include things like passes, shots, fouls, saves, dribbles, among others. For each of these, there are successful and unsuccessful outcomes. A successful shot could be a goal while a failed pass would be a turnover. We would hypothesize that certain things like position on field and distance of the attempt (long vs short pass) would have different success rates. Like any sport, there are also eb and flows of a competition, we wanted to create a view to get a high level understanding of what occured in the match.")
 
     st.markdown("""
     * **Chart 1** : *Match Summary Metrics*
