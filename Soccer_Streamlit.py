@@ -781,7 +781,7 @@ def main4():
 
     st.write("## Need Some Help?")
     
-    st.markdown("""You can find a video [here](https://www.youtube.com) that will walk you through our website and how to use it to its best ability!""")
+    st.markdown("""You can find a video below that will walk you through our website and how to use it to its best ability!""")
 
     video_file = open('kick_logic_demo.mp4', 'rb')
     video_bytes = video_file.read()
