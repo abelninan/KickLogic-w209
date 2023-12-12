@@ -783,6 +783,11 @@ def main4():
     
     st.markdown("""You can find a video [here](https://www.youtube.com) that will walk you through our website and how to use it to its best ability!""")
 
+    video_file = open('kick_logic_demo.mp4', 'rb')
+    video_bytes = video_file.read()
+    st.video(video_bytes)
+
+
 def main():
     st.set_page_config(page_title="KickLogic", page_icon=":soccer:", layout = "centered")
     st.title('KickLogic - Soccer Analytics')
